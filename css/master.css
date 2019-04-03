@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+  .__container-carousel .carousel-inner .carousel-item {
+    display: flex;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+
+  }
+  
+  
+  .__container-carousel .carousel-inner .carousel-item.slide1 {
+    background-image: url("../img/imagen1.jpg");
+    min-height: 70vh;
+  }
+  
+  .__container-carousel .carousel-inner .carousel-item.slide2 {
+    background-image: url("../img/imagen2.jpg");
+    min-height: 70vh;
+  }
+  
+  .__container-carousel .carousel-inner .carousel-item.slide3 {
+    background-image: url("../img/imagen3.jpg");
+    min-height: 70vh;
+  }
+
+
