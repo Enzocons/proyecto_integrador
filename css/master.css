@@ -28,6 +28,22 @@
     min-height: 40vh;
 
   }
+  .section1{
+    background-color: aqua;
+    display:flex;
+    flex-direction:column;
+  }
+  .article1, .article2, .article3{
+    background-color:red;
+    widows: 60%;
+    height:20%;
+    padding: 20px;
+    margin: 20px;
+    align-items: center;
+    text-align: center;
+
+  }
+  
 
 
   
