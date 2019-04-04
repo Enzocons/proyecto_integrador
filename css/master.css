@@ -4,49 +4,81 @@
     padding: 0;
 }
 
-  .__container-carousel .carousel-inner .carousel-item {
-    display:flex;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
+  .__container-carousel .carousel-inner .carousel-item img {
+    height:100vw;
 
   }
   
-  
-  .__container-carousel .carousel-inner .carousel-item.slide1 {
-    background-image: url("../img/imagen1.jpg");
-    min-height: 50vh;
-  }
-  
-  .__container-carousel .carousel-inner .carousel-item.slide2 {
-    background-image: url("../img/imagen2.jpg");
-    min-height: 50vh;
-  }
-  
-  .__container-carousel .carousel-inner .carousel-item.slide3 {
-    background-image: url("../img/imagen3.jpg");
-    min-height: 50vh;
-
-  }
   .section1{
     background-image: url(../img/thumb-1920-549939.jpg);
     display:flex;
     flex-direction:column;
     align-items: center;
     background-size: cover;
+    padding: 10px;
   }
-  .article1, .article2, .article3{
-    background-color:red;
-    width: 33%;
+  .section1 article{
+    background-color: #111111;
     margin: 20px;
     align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(73, 5, 5, 0.637), 0 6px 20px 0 rgba(90, 3, 3, 0.651)
 
   }
 
    img{
      width: 100%;
    }
+  .section1 p{
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 0;
+    padding: 5px;
+    color: #999999;
+  }
 
+@media(min-width: 576px){
+  .__container-carousel .carousel-inner .carousel-item img {
+    height:60vw;
+    
 
+  }
+  .section1 article{
+    max-width: 90%;
+  }
+
+}
   
+@media (min-width: 768px){
+  .section1{
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .section1 article{
+    margin:31px;
+    max-width: 50%;
+  }
+  .__container-carousel .carousel-inner .carousel-item img {
+    height:50vw;
 
+  }
+}
+@media (min-width: 992px){
+  .__container-carousel .carousel-inner .carousel-item img {
+    height:40vw;
+
+  }
+ 
+  .section1 article{
+    margin:41px;
+  }
+}
+@media (min-width: 1200px){
+  .__container-carousel .carousel-inner .carousel-item img {
+    height:35vw;
+
+  }
+  .section1 article{
+    margin:50px;
+  }
+} 
