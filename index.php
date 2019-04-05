@@ -10,7 +10,7 @@
     <script src="main.js"></script>
 </head>
 <body>
-  <div class="container mx-2">
+  <div class="container">
     <section class="__container-carousel">
       <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -50,7 +50,7 @@
                   </p>
               </article>
               <article class="article3 col-xs-12 col-sm-6 col-md-5 col-lg-3 col-xl-3 p-0">
-                <img src="img/razer1.jpg" class="img-fluid rounded" alt="Responsive image">
+                <img src="img/razer1.jpg" class="img-fluid  rounded" alt="Responsive image">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, excepturi!
                   </p>
               </article>
