@@ -40,7 +40,7 @@
     color: #999999;
   }
   .section2 article img{
-    height: 15vw;
+    height: 90vw;
     
   }
 
@@ -52,6 +52,10 @@
   }
   .section1 article{
     max-width: 90%;
+  }
+  .section2 article img{
+    height: 55vw;
+    
   }
 
 }
@@ -70,6 +74,10 @@
     height:50vw;
 
   }
+  .section2 article img{
+    height: 35vw;
+    
+  }
 }
 @media (min-width: 992px){
   .__container-carousel .carousel-inner .carousel-item img {
@@ -80,6 +88,10 @@
   .section1 article{
     margin:38px;
   }
+  .section2 article img{
+    height: 25vw;
+    
+  }
 }
 @media (min-width: 1200px){
   .__container-carousel .carousel-inner .carousel-item img {
@@ -88,5 +100,9 @@
   }
   .section1 article{
     margin:46px;
+  }
+  .section2 article img{
+    height: 25vw;
+    
   }
 } 
