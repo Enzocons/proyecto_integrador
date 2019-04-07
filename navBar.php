@@ -22,9 +22,7 @@
           <a class="dropdown-item" href="#">Dell</a>
           <a class="dropdown-item" href="#">Alienware</a>
           <a class="dropdown-item" href="#">Razer</a>
-          <a class="dropdown-item" href="#">Logitech</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Logitech</a>      
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -35,8 +33,6 @@
           <a class="dropdown-item" href="teclados.php">Teclados</a>
           <a class="dropdown-item" href="mouse.php">Mouse</a>
           <a class="dropdown-item" href="headsets.php">Headsets</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
       <li class="nav-item">
@@ -49,6 +45,9 @@
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button type="submit" <i class="fas fa-search"></i> </button>
+      <button type="button" <i class="fas fa-user-alt"></i></button>
+      <button type="button" <i class="fas fa-shopping-cart"></i></button>
+      
     </form>
   </div>
 </nav>

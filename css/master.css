@@ -36,3 +36,17 @@
     background-color: #000!important;
 }
 
+  .button {
+    border-width: 9px;
+    border-style: solid;
+    margin: 3px;
+  }
+
+  .dropdown-item{
+    background: black;
+    color: white;
+  }
+
+  .dropdown-menu{
+    background-color: black;
+  }
