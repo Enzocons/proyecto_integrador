@@ -49,6 +49,7 @@
     height:60vw;
     
 
+<<<<<<< HEAD
   }
   .section1 article{
     max-width: 90%;
@@ -96,6 +97,13 @@
 @media (min-width: 1200px){
   .__container-carousel .carousel-inner .carousel-item img {
     height:35vw;
+=======
+  /* ---------------------------Cambios NavBar------------------------------ */
+
+  .bg_negro {
+    background-color: #000!important;
+}
+>>>>>>> cambiosPau
 
   }
   .section1 article{
