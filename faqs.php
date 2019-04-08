@@ -14,35 +14,47 @@
         ?>
     <div class="container">
         <section class="sectionmain col-xs-12 col-md-12 col-lg-12">
-            <h1>FAQs</h1>
+            <h1>FAQs</h1> 
             <article>
-                <h3>¿Cuáles son las formas de pago? <button><img src="img/outline_add_white_18dp.png" alt=""></button></h3>
-                <p>Las formas de pago son: efectivo, transferencia, depósito bancario o PayPal.</p>
+                <h3>¿Cuáles son las formas de pago? <button data-toggle="collapse" data-target="#pcollapse"><img src="img/outline_add_white_18dp.png" alt=""></button></h3>
+                   <div class="collapse" id="pcollapse"> 
+                        <p>Las formas de pago son: efectivo, transferencia, depósito bancario o PayPal.</p>
+                    </div>
                 <hr>
             </article>
             <article>
-                <h3>¿Puedo pagar en cuotas sin interés?  <button><img src="img/outline_add_white_18dp.png" alt=""></button></h3>
-                <p>Mercado Pago: dependiendo la tarjeta que tengas te ofrece cuotas sin interés. El link para saber cuáles son las tarjetas con promociones es:     <a href="https://www.mercadopago.com.ar/promociones">promociones mercadopago.</a></p>
+                <h3>¿Puedo pagar en cuotas sin interés?  <button data-toggle="collapse" data-target="#p2collapse"><img src="img/outline_add_white_18dp.png" alt=""></button></h3>
+                    <div class="collapse" id="p2collapse">
+                        <p>Mercado Pago: dependiendo la tarjeta que tengas te ofrece cuotas sin interés. El link para saber cuáles son las tarjetas con promociones es:     <a href="https://www.mercadopago.com.ar/promociones">promociones mercadopago.</a></p>
+                    </div>
                 <hr>
             </article>
             <article>
-                <h3>¿Los precios publicados en la web en que moneda están?  <button><img src="img/outline_add_white_18dp.png" alt=""></button></h3>
-                <p>Los precios de la web están expresados en pesos argentinos, salvo, aquellos que su marcador indiquen que están en USD.</p>
+                <h3>¿Los precios publicados en la web en que moneda están?  <button data-toggle="collapse" data-target="#p3collapse"><img src="img/outline_add_white_18dp.png" alt=""></button></h3>
+                    <div class="collapse" id="p3collapse">    
+                        <p>Los precios de la web están expresados en pesos argentinos, salvo, aquellos que su marcador indiquen que están en USD.</p>
+                    </div>
                 <hr>
             </article>
             <article>
-                <h3>¿Son precios Finales o más IVA?  <button><img src="img/outline_add_white_18dp.png" alt=""></button></h3>
-                <p>Todos los precios son finales IVA incluido.</p>
+                <h3>¿Son precios Finales o más IVA?  <button data-toggle="collapse" data-target="#p4collapse"><img src="img/outline_add_white_18dp.png" alt=""></button></h3>
+                    <div class="collapse" id="p4collapse">
+                        <p>Todos los precios son finales IVA incluido.</p>
+                    </div>
                 <hr>
             </article>
             <article>
-                <h3>¿Hacen envíos internacionales?  <button><img src="img/outline_add_white_18dp.png" alt=""></button></h3> 
-                <p>No, por el momento solo envios nacionales.</p>
+                <h3>¿Hacen envíos internacionales?  <button data-toggle="collapse" data-target="#p5collapse"><img src="img/outline_add_white_18dp.png" alt=""></button></h3> 
+                    <div class="collapse" id="p5collapse">    
+                        <p>No, por el momento solo envios nacionales.</p>
+                    </div>
                 <hr>
             </article>
             <article>
-                <h3>¿Entregan factura y garantía?  <button><img src="img/outline_add_white_18dp.png" alt=""></button></h3>
-                <p>En absolutamente todas las ventas que realizamos se entrega factura fiscal en donde especifica el tiempo de la garantía.</p>
+                <h3>¿Entregan factura y garantía?  <button data-toggle="collapse" data-target="#p6collapse"><img src="img/outline_add_white_18dp.png" alt=""></button></h3>
+                    <div class="collapse" id="p6collapse">
+                        <p>En absolutamente todas las ventas que realizamos se entrega factura fiscal en donde especifica el tiempo de la garantía.</p>
+                    </div>        
                 <hr>
                 
             </article>

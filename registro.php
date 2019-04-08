@@ -26,7 +26,7 @@
                     <div class="form-group">
                       <label for="contra">Contraseña</label> <!--NAME="pass"-->
                       <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" required>
-                      <small id="olvidecontraseña" class="form-text text-muted"><p> La contraseña debe tener 4 caracteres como mínimo.</p></small>
+                      <small id="olvidecontraseña" class="form-text text-muted"><p> La contraseña debe tener 6 caracteres como mínimo.</p></small>
                     </div>
                     <div class="form-group">
                             <label for="confirmcontra">Confirma tu contraseña</label> <!--NAME="repass"-->
@@ -39,7 +39,7 @@
                     </div>
                     <button type="submit" class="btn btn-outline-light">Enviar</button>
                     <hr>
-                    <label class="cuenta" ><a href="login.html">ya tenes cuenta?</a></label>
+                    <label class="cuenta" ><a href="login.php">ya tenes cuenta?</a></label>
                   </form>
             </article>
         </section>
