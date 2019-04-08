@@ -20,6 +20,7 @@
     background-size: cover;
     padding: 10px;
     margin-top: 40px;
+    
   }
   .section1 article{
     background-color: #111111;
@@ -43,13 +44,16 @@
     height: 90vw;
     
   }
+  /* ---------------------------Cambios NavBar------------------------------ */
+  .bg_negro {
+    background-color: #000!important;
+}
 
 @media(min-width: 576px){
   .__container-carousel .carousel-inner .carousel-item img {
     height:60vw;
     
 
-<<<<<<< HEAD
   }
   .section1 article{
     max-width: 90%;
@@ -64,7 +68,7 @@
 @media (min-width: 768px){
   .section1{
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 0;
   }
   .section1 article{
@@ -97,13 +101,7 @@
 @media (min-width: 1200px){
   .__container-carousel .carousel-inner .carousel-item img {
     height:35vw;
-=======
-  /* ---------------------------Cambios NavBar------------------------------ */
 
-  .bg_negro {
-    background-color: #000!important;
-}
->>>>>>> cambiosPau
 
   }
   .section1 article{
