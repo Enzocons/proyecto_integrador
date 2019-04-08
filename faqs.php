@@ -14,7 +14,7 @@
         ?>
     <div class="container">
         <section class="sectionmain col-xs-12 col-md-12 col-lg-12">
-            <h1>FAQs</h1>
+            <h1>FAQs</h1> 
             <article>
                 <h3>¿Cuáles son las formas de pago? <button><img src="img/outline_add_white_18dp.png" alt=""></button></h3>
                 <p>Las formas de pago son: efectivo, transferencia, depósito bancario o PayPal.</p>

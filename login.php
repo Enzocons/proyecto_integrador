@@ -22,7 +22,7 @@
                     <div class="form-group">
                       <label for="contra">Contraseña</label> <!--NAME="pass"-->
                       <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" required>
-                      <small id="olvidecontraseña" class="form-text text-muted"><p> La contraseña debe tener 4 caracteres como mínimo.</p></small>
+                      <small id="olvidecontraseña" class="form-text text-muted"><p> La contraseña debe tener 6 caracteres como mínimo.</p></small>
                       <small id="olvidecontraseña" class="form-text text-muted"><a href="">Olvido su contraseña?</a> </small>
                     </div>
                     <div class="form-group form-check"> <!--NAME="remember"-->
@@ -32,7 +32,7 @@
                     </div>
                     <button type="submit" class="btn btn-outline-light">Enviar</button>
                     <hr>
-                    <label class="cuenta" ><a href="registro1.1.html">Sos nuevo?</a></label>
+                    <label class="cuenta" ><a href="registro.php">Sos nuevo?</a></label>
                   </form>
             </article>
         </section>
