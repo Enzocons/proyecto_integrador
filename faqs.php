@@ -54,7 +54,7 @@
                 <h3>¿Entregan factura y garantía?  <button data-toggle="collapse" data-target="#p6collapse"><img src="img/outline_add_white_18dp.png" alt=""></button></h3>
                     <div class="collapse" id="p6collapse">
                         <p>En absolutamente todas las ventas que realizamos se entrega factura fiscal en donde especifica el tiempo de la garantía.</p>
-                    </div>        
+                    </div>       
                 <hr>
                 
             </article>
