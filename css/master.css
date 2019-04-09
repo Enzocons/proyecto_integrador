@@ -63,6 +63,19 @@
   .dropdown-menu{
     background-color: black;
   }
+  
+  form a{
+    align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  color: buttontext;
+  background-color: buttonface;
+  box-sizing: border-box;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial;
+}  
 
   /* --------------------------Cambios estilos de texto------------------------- */
 

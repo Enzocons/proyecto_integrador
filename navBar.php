@@ -45,7 +45,7 @@
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button type="submit" <i class="fas fa-search"></i> </button>
-      <button type="button" <i class="fas fa-user-alt"></i></button>
+      <a href="login.php" <i class="fas fa-user-alt" role="button"></a>
       <button type="button" <i class="fas fa-shopping-cart"></i></button>
       
     </form>

@@ -34,4 +34,15 @@ section button{
     background-color: rgba(000, 000, 000, 0.0);
 }
 
-  
+form a{
+      align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}  
