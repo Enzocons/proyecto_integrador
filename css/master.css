@@ -20,6 +20,7 @@
     background-size: cover;
     padding: 10px;
     margin-top: 40px;
+    
   }
   .section1 article{
     background-color: #111111;
@@ -29,7 +30,7 @@
 
   }
 
-   img{
+ img{
      width: 100%;
    }
   .section1 p{
@@ -43,13 +44,54 @@
     height: 90vw;
     
   }
+  /* ---------------------------Cambios NavBar------------------------------ */
+  .bg_negro {
+    background-color: #000!important;
+}
 
+  .button {
+    border-width: 9px;
+    border-style: solid;
+    margin: 3px;
+  }
+
+  .dropdown-item{
+    background: black;
+    color: white;
+  }
+
+  .dropdown-menu{
+    background-color: black;
+  }
+
+  form a{
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}  
+
+  /* --------------------------Cambios estilos de texto------------------------- */
+
+  h2 {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    color: white;
+    display: inline-block;
+    text-align: left;
+  }
+  
 @media(min-width: 576px){
   .__container-carousel .carousel-inner .carousel-item img {
     height:60vw;
     
 
-<<<<<<< HEAD
   }
   .section1 article{
     max-width: 90%;
@@ -68,7 +110,7 @@
     padding: 0;
   }
   .section1 article{
-    margin:28px;
+    margin:27px;
     max-width: 50%;
   }
   .__container-carousel .carousel-inner .carousel-item img {
@@ -85,6 +127,10 @@
     height:40vw;
 
   }
+  
+  .section1{
+    flex-wrap: nowrap;
+  }
  
   .section1 article{
     margin:38px;
@@ -97,13 +143,7 @@
 @media (min-width: 1200px){
   .__container-carousel .carousel-inner .carousel-item img {
     height:35vw;
-=======
-  /* ---------------------------Cambios NavBar------------------------------ */
 
-  .bg_negro {
-    background-color: #000!important;
-}
->>>>>>> cambiosPau
 
   }
   .section1 article{
