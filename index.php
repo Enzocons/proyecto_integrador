@@ -90,6 +90,11 @@
           </article>
         </section>
     </div>
+
+    <?php
+    include_once 'footer.php'
+    ?>
+
 <!-- <<<<<<< HEAD
 =======
 >>>>>>>>:index.html
