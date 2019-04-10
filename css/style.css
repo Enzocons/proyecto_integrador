@@ -8,17 +8,13 @@ body{
     color: #c7c7c7;
 }
 @font-face{
-    font-family:'beyno';
-    src: url('fonts/beyno/BEYNO.otf') format('opentype'); 
- }
- @font-face{
-     font-family:'neutra-bookalt';
-     src: url('fonts/neutra/NEUTRATEXT-BOOKALT.otf') format('opentype'); 
-  }
-  @font-face{
-     font-family:'neutra-demialt';
-     src: url('fonts/neutra/NEUTRATEXT-DEMIALT.otf') format('opentype'); 
-  }
+	font-family: 'amethyst'; 
+	src: url('Fonts/Amethyst/Amethyst.ttf') format('truetype'); 
+}   
+@font-face{
+	font-family: 'futura'; 
+	src: url('Fonts/Futura/FuturaStd-Light.otf') format('opentype'); 
+}
 .sectionmain{
     background-color: #272727;
     margin-top: 1em;

@@ -9,19 +9,17 @@
 
   }
   body{
-    background-color: black;
+    /* background-color: black; */
+    background-image: url(../img/background-imgcyan.jpg);
+    background-size: cover;
   }
   @font-face{
-    font-family:'beyno';
-    src: url('fonts/beyno/BEYNO.otf') format('opentype'); 
- }
- @font-face{
-     font-family:'neutra-bookalt';
-     src: url('fonts/neutra/NEUTRATEXT-BOOKALT.otf') format('opentype'); 
-  }
+    font-family: 'amethyst'; 
+    src: url('Fonts/Amethyst/Amethyst.ttf') format('truetype'); 
+  }   
   @font-face{
-     font-family:'neutra-demialt';
-     src: url('fonts/neutra/NEUTRATEXT-DEMIALT.otf') format('opentype'); 
+    font-family: 'futura'; 
+    src: url('Fonts/Futura/FuturaStd-Light.otf') format('opentype'); 
   }
   .section1{
     background-image: url(../img/thumb-1920-549939.jpg);
@@ -188,9 +186,9 @@ form button:hover{
   width: 100%;
   margin-bottom: 20px;
  }
- .titulosDePaginas{
+  h2 .titulosDePaginas{
    color: #c7c7c7;
-   font-family: 'BENYO';
+   font-family:'amethyst';
  }
 
  @media (max-width:768px){
