@@ -11,9 +11,11 @@
 <body>
     <div class="container">
         <section class="section1 col-xs-12 col-md-12 col-lg-12">
-          <div class="logo">
-              <img src="img/logo.svg" alt="">  
-          </div>
+         <div class="logo">
+              <a href="index.php">
+                <img src="img/logo.svg" alt="">  
+              </a>  
+           </div>
           <article class="col-xs-12 col-md-8 col-lg-5">
                 <h1>Login</h1> <hr>
                 <form method="POST" action="">
