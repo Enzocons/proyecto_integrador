@@ -8,7 +8,6 @@ body{
     color: #c7c7c7;
 }
 @font-face{
-<<<<<<< HEAD
     font-family:'beyno';
     src: url('../fonts/beyno/BEYNO.OTF') format('opentype'); 
  }
@@ -20,15 +19,6 @@ body{
      font-family:'neutra-demialt';
      src: url('../fonts/neutra/NEUTRATEXT-DEMIALT.OTF') format('opentype'); 
   }
-=======
-	font-family: 'amethyst'; 
-	src: url('Fonts/Amethyst/Amethyst.ttf') format('truetype'); 
-}   
-@font-face{
-	font-family: 'futura'; 
-	src: url('Fonts/Futura/FuturaStd-Light.otf') format('opentype'); 
-}
->>>>>>> 8481d0165fb49871143674ba43258276c53a10ea
 .sectionmain{
     background-color: #272727;
     margin-top: 1em;
