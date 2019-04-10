@@ -11,7 +11,10 @@
 <body>
     <div class="container">
         <section class="section1 col-xs-12 col-md-12 col-lg-12">
-            <article class="col-xs-12 col-md-8 col-lg-5">
+          <div class="logo">
+              <img src="img/logo.svg" alt="">  
+          </div>
+          <article class="col-xs-12 col-md-8 col-lg-5">
                 <h1>Login</h1> <hr>
                 <form method="POST" action="">
                     <div class="form-group">

@@ -7,6 +7,18 @@ body{
     background-color: black;
     color: #c7c7c7;
 }
+@font-face{
+    font-family:'beyno';
+    src: url('fonts/beyno/BEYNO.otf') format('opentype'); 
+ }
+ @font-face{
+     font-family:'neutra-bookalt';
+     src: url('fonts/neutra/NEUTRATEXT-BOOKALT.otf') format('opentype'); 
+  }
+  @font-face{
+     font-family:'neutra-demialt';
+     src: url('fonts/neutra/NEUTRATEXT-DEMIALT.otf') format('opentype'); 
+  }
 .sectionmain{
     background-color: #272727;
     margin-top: 1em;
@@ -25,24 +37,45 @@ hr {
     border-width: 0.1em;
     border-color: black;
     }
-/*p{
-    display: none;
-}*/
 
 section button{
     border: none;
     background-color: rgba(000, 000, 000, 0.0);
 }
-
+/* ----------------Cambios navBAR-------------*/
 form a{
-      align-items: flex-start;
+    align-items: flex-start;
     text-align: center;
     cursor: default;
     color: buttontext;
     background-color: buttonface;
     box-sizing: border-box;
     border-width: 2px;
-    border-style: outset;
+    border-style: solid;
     border-color: buttonface;
     border-image: initial;
 }  
+form a:hover{
+    color: buttontext;
+    box-shadow: 0.1em 0em 0.5em 0.07em #00FFFF;
+    }
+form button:hover{
+    box-shadow: 0em 0em 0.5em 0.07em #00FFFF;
+    }
+.dropdown-menu{
+      background-color: black;
+    }
+.bg_negro {
+    background-color: #000!important;
+    }
+    
+.button {
+     border-width: 9px;
+     border-style: solid;
+     margin: 3px;
+     }
+    
+.dropdown-item{
+    background: black;
+    color: white;
+    }
