@@ -9,8 +9,8 @@
 
   }
   body{
-    /* background-color: black; */
-    background-image: url(../img/background-imgcyan.jpg);
+     background-color: black; 
+    /* background-image: url(../img/background-imgcyan.jpg); */
     background-size: cover;
   }
   @font-face{
