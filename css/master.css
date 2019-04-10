@@ -9,7 +9,9 @@
 
   }
   body{
-    background-color: black;
+    /* background-color: black; */
+    background-image: url(../img/background-imgcyan.jpg);
+    background-size: cover;
   }
   @font-face{
     font-family:'beyno';
@@ -194,11 +196,11 @@ form button:hover{
   margin-bottom: 20px;
  }
 
- .contactForm{
+ /* .contactForm{
   display: flex;
   background-color: #C7C7C7;
   flex-wrap: nowrap;
- }
+ } */
  .titulosDePaginas{
    color: #c7c7c7;
    font-family: 'neutra-bookalt';
