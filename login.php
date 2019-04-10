@@ -15,27 +15,27 @@
               <img src="img/logo.svg" alt="">  
           </div>
           <article class="col-xs-12 col-md-8 col-lg-5">
-                <h1>Login</h1> <hr>
+                <h1>Log In</h1> <hr>
                 <form method="POST" action="">
                     <div class="form-group">
                       <label for="email">Email</label> <!--NAME="email"-->
-                      <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su email" required>
+                      <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insert email" required>
                       <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group">
-                      <label for="contra">Contraseña</label> <!--NAME="pass"-->
-                      <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" required>
-                      <small id="olvidecontraseña" class="form-text text-muted"><p> La contraseña debe tener 6 caracteres como mínimo.</p></small>
-                      <small id="olvidecontraseña" class="form-text text-muted"><a href="">Olvido su contraseña?</a> </small>
+                      <label for="contra">Password</label> <!--NAME="pass"-->
+                      <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                      <small id="olvidecontraseña" class="form-text text-muted"><p> Password must have at least 6 characters.</p></small>
+                      <small id="olvidecontraseña" class="form-text text-muted"><a href="">Forgot your password?</a> </small>
                     </div>
                     <div class="form-group form-check"> <!--NAME="remember"-->
                       <input name="remember" type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Recuérdame.</label>
+                      <label class="form-check-label" for="exampleCheck1">Remember me</label>
             
                     </div>
-                    <button type="submit" class="btn btn-outline-light">Enviar</button>
+                    <button type="submit" class="btn btn-outline-light">Send</button>
                     <hr>
-                    <label class="cuenta" ><a href="registro.php">Sos nuevo?</a></label>
+                    <label class="cuenta" ><a href="registro.php">New here?</a></label>
                   </form>
             </article>
         </section>

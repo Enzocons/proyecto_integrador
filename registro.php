@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>registro</title>
+    <title>:: Register ::</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -15,34 +15,34 @@
               <img src="img/logo.svg" alt="">  
           </div>
             <article class="col-xs-12 col-md-8 col-lg-5">
-                <h1>Crear cuenta</h1> <hr>
+                <h1>Create account</h1> <hr>
                 <form method="POST" action="">
                      <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+                            <label for="nombre">Name</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Your name here" required>
                     </div>
                     <div class="form-group">
                       <label for="email">Email</label> <!--NAME="email"-->
-                      <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su email" required>
+                      <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insert email" required>
                       <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group">
-                      <label for="contra">Contraseña</label> <!--NAME="pass"-->
-                      <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" required>
-                      <small id="olvidecontraseña" class="form-text text-muted"><p> La contraseña debe tener 6 caracteres como mínimo.</p></small>
+                      <label for="contra">Password</label> <!--NAME="pass"-->
+                      <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                      <small id="olvidecontraseña" class="form-text text-muted"><p> Password must have at least 6 characters.</p></small>
                     </div>
                     <div class="form-group">
-                            <label for="confirmcontra">Confirma tu contraseña</label> <!--NAME="repass"-->
-                            <input name="repass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" required>
-                            <small id="olvidecontraseña" class="form-text text-muted"><a href="">Olvido su contraseña?</a> </small>
+                            <label for="confirmcontra">Confirm password</label> <!--NAME="repass"-->
+                            <input name="repass" type="password" class="form-control" id="exampleInputPassword1" placeholder=" Confirm password" required>
+                            <!-- <small id="olvidecontraseña" class="form-text text-muted"><a href="">Olvido su contraseña?</a> </small> -->
                     </div>
-                    <div class="form-group form-check"> <!--NAME="remember"-->
+                    <!-- <div class="form-group form-check"> 
                       <input name="remember" type="checkbox" class="form-check-input" id="exampleCheck1">
                       <label class="form-check-label" for="exampleCheck1">Recuérdame.</label>
-                    </div>
-                    <button type="submit" class="btn btn-outline-light">Enviar</button>
+                    </div> -->
+                    <button type="submit" class="btn btn-outline-light">Send</button>
                     <hr>
-                    <label class="cuenta" ><a href="login.php">ya tenes cuenta?</a></label>
+                    <label class="cuenta" ><a href="login.php">Already have an account?</a></label>
                   </form>
             </article>
         </section>
