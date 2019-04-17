@@ -21,20 +21,20 @@
                 <form method="POST" action="">
                      <div class="form-group">
                             <label for="nombre">Name</label>
-                            <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Your name here" required>
+                            <input name="nombre" type="text" class="form-control" id="nombre" value="<?= (isset($errores["nombre"]))? "" : persistir("nombre"); ?>" placeholder="Your name here" required>
                     </div>
                     <div class="form-group">
                       <label for="email">Email</label> <!--NAME="email"-->
-                      <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insert email" required>
+                      <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?=(isset($errores["email"]))? "" : persistir("email");?>" placeholder="Insert email" required>
                       <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group">
-                      <label for="contra">Password</label> <!--NAME="pass"-->
+                      <label for="contra">Password</label> <!--NAME="password"-->
                       <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
                       <small id="olvidecontraseña" class="form-text text-muted"><p> Password must have at least 6 characters.</p></small>
                     </div>
                     <div class="form-group">
-                            <label for="confirmcontra">Confirm password</label> <!--NAME="repass"-->
+                            <label for="confirmcontra">Confirm password</label> <!--NAME="repassword"-->
                             <input name="repassword" type="password" class="form-control" id="exampleInputPassword1" placeholder=" Confirm password" required>
                             <!-- <small id="olvidecontraseña" class="form-text text-muted"><a href="">Olvido su contraseña?</a> </small> -->
                     </div>
