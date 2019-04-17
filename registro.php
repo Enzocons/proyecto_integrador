@@ -1,3 +1,18 @@
+<?php
+include_once("controladores/funciones.php");
+if ($_POST){
+  $errores=validar($_POST,"registro");
+  if(count($errores)==0){
+    $avatar = armarAvatar($_FILES);
+    $registro = armarRegistro($_POST,$avatar);
+    guardar($registro);
+    header("location:login.php");
+    exit;
+  }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
