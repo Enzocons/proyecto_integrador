@@ -21,7 +21,7 @@
                 <form method="POST" action="">
                      <div class="form-group">
                             <label for="nombre">Name</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Your name here" required>
+                            <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Your name here" required>
                     </div>
                     <div class="form-group">
                       <label for="email">Email</label> <!--NAME="email"-->
@@ -30,12 +30,12 @@
                     </div>
                     <div class="form-group">
                       <label for="contra">Password</label> <!--NAME="pass"-->
-                      <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                      <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
                       <small id="olvidecontraseña" class="form-text text-muted"><p> Password must have at least 6 characters.</p></small>
                     </div>
                     <div class="form-group">
                             <label for="confirmcontra">Confirm password</label> <!--NAME="repass"-->
-                            <input name="repass" type="password" class="form-control" id="exampleInputPassword1" placeholder=" Confirm password" required>
+                            <input name="repassword" type="password" class="form-control" id="exampleInputPassword1" placeholder=" Confirm password" required>
                             <!-- <small id="olvidecontraseña" class="form-text text-muted"><a href="">Olvido su contraseña?</a> </small> -->
                     </div>
                     <!-- <div class="form-group form-check"> 
