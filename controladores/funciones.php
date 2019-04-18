@@ -19,6 +19,8 @@ function validar($datos){
     }elseif (!filter_var($email,    FILTER_VALIDATE_EMAIL)){
         $errores["email"]="Email  inválido";
     
+    }elseif ($errorEmail=true){
+        $errores["email"]="Hermano querido este email ya esta registrado";
     }
     $password = trim($datos["password"]);
     $repassword = trim($datos["repassword"]);
@@ -74,3 +76,26 @@ function validar($datos){
         $jsusuario = json_encode($usuario);
         file_put_contents("usuarios.json", $jsusuario . PHP_EOL ,FILE_APPEND);
     }
+
+    function abrirBaseDatos(){
+        $baseDatosJson= file_get_contents("usuarios.json");
+        $baseDatosJson = explode(PHP_EOL,$baseDatosJson);
+        array_pop($baseDatosJson);
+        foreach ($baseDatosJson as  $usuarios) {
+            $arrayUsuarios[]= json_decode($usuarios,true);
+        }
+        return $arrayUsuarios;
+    }
+
+    function buscarEmail($email){
+
+        $usuarios = abrirBaseDatos();
+    
+        foreach ($usuarios as  $usuario) {
+            if($email === $usuario["email"]){
+                $errorEmail=true;
+            
+            }
+        }
+    }
+    
