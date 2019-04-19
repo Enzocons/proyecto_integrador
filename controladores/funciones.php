@@ -1,4 +1,5 @@
 <?php
+session_start();
 function dd($valor){
     echo "<pre>";
         var_dump($valor);
@@ -6,41 +7,53 @@ function dd($valor){
     echo "</pre>";
 }
 
-function validar($datos){
+function validar($datos,$bandera){
     $errores = [];
-    
-    $nombre = trim($datos["nombre"]);
-    if (empty($nombre)){
-        $errores["nombre"]="Complete su nombre";
-    }
+    if (isset($datos["nombre"])) {
+        $nombre=trim($datos["nombre"]);
+        if (empty($nombre)){
+            $errores["nombre"]="Complete the name";
+            }
+    }    
+
     $email = trim($datos["email"]);
     if(empty($email)){
-        $errores["email"]="Complete el email";
-    }elseif (!filter_var($email,    FILTER_VALIDATE_EMAIL)){
-        $errores["email"]="Email  inválido";
-    
+        $errores["email"]="Complete the email";
+    }elseif (!filter_var($email,FILTER_VALIDATE_EMAIL)){
+        $errores["email"]="Invalid email";
     }
-    $password = trim($datos["password"]);
-    $repassword = trim($datos["repassword"]);
-    if(empty($password)){
-        $errores["password"] = "Introduzca su password";
-    }elseif (strlen($password)<6) {
-        $errores["password"] = "La contraseña debe tener mínimo seis carácteres";
-    }elseif ($password != $repassword) {
-        $errores["repassword"]= "Hermano querido no coinciden las contraseñas";
+    if ($bandera=="register") {
+         if ($erroremail=true) {
+            $errores["email"]="esta cuenta ya esta registrada";
+        }
     }
-    if(isset($_FILES)){
-        if($_FILES["avatar"]["error"] !=UPLOAD_ERR_OK){
-            $errores["avatar"]="Sube una foto...";
+    $pass=trim($datos["pass"]);
+    if (isset($datos["repass"])) {
+        $repass=trim($datos["repass"]);
+    }
+    if(empty($pass)){
+        $errores["pass"]="Insert your password";
+    }elseif (strlen($pass)<6) {
+        $errores["pass"]="Password must have at least 6 characters";
+    }
+    if (isset($datos["repass"])) {
+        if ($pass != $repass) {
+            $errores["repass"]="Passwords do not match";
+        }
+    }
+    if($bandera=="register"){
+        if($_FILES["avatar"]["error"]!=0){
+            $errores["avatar"]="Error,debe subir imagen";
         }
         $nombre = $_FILES["avatar"]["name"];
         $ext = pathinfo($nombre,PATHINFO_EXTENSION);
-        if($ext != "jpg" && $ext != "png"){
-            $errores["avatar"]="Eso no es una foto....";
-        }
+        if($ext!="png" && $ext!="jpg"){
+            $errores["avatar"]="Debe seleccionar archivo png ó jpg";
+        }   
     }
+
     return $errores;
-    }
+}
     
     function persistir($campo){
         if(isset($_POST[$campo])){
@@ -48,24 +61,26 @@ function validar($datos){
         }
     }
     
-    function crearAvatar($imagen){
+    function armarAvatar($imagen){
         $nombre = $imagen["avatar"]["name"];
         $ext = pathinfo($nombre,PATHINFO_EXTENSION);
-        $archivoOrigen = $imagen["avatar"]["temp_name"];
+        $archivoOrigen = $imagen["avatar"]["tmp_name"];
         $archivoDestino = dirname(__DIR__);
         $archivoDestino = $archivoDestino."/imagenes/";
-        $archivoDestino = $archivoDestino.uniqid().".".$ext;
+        $avatar=uniqid();
+        $archivoDestino = $archivoDestino.$avatar;
+        $archivoDestino = $archivoDestino.".".$ext;
         move_uploaded_file($archivoOrigen,$archivoDestino);
-    
-        return $archivoDestino;
+        $avatar=$avatar.".".$ext;
+        return $avatar;
     }
     
-    function crearRegistro($datos,$imagen){
+    function crearRegistro($datos){
         $usuario = [
             "nombre"=>$datos["nombre"],
             "email"=>$datos["email"],
-            "password"=> password_hash($datos["password"],PASSWORD_DEFAULT),
-            "avatar"=>$imagen 
+            "password"=> password_hash($datos["pass"],PASSWORD_DEFAULT),
+            "avatar"=>$imagen
         ];
         return $usuario;
     }
@@ -73,4 +88,53 @@ function validar($datos){
     function guardar($usuario){
         $jsusuario = json_encode($usuario);
         file_put_contents("usuarios.json", $jsusuario . PHP_EOL ,FILE_APPEND);
+    }
+
+    function buscarEmail($email){
+        $usuarios=abrirBaseDeDatos();
+        foreach ($usuarios as $usuario) {
+          if ($email===$usuario["email"]) {
+              return $usuario;
+          }
+        }
+        return null;
+    }
+    function emailencontrado($email){
+        $user=abrirBaseDeDatos();
+        foreach ($user as $usuario) {
+            if ($email===$usuario["email"]) {
+                $erroremail=true;
+            }
+        }
+    }
+
+    function abrirBaseDeDatos(){
+        $baseDatosJson=file_get_contents("usuarios.json");
+        $baseDatosJson=explode(PHP_EOL,$baseDatosJson);
+        array_pop($baseDatosJson);
+        foreach ($baseDatosJson as $usuarios) {
+            $arrayUsuarios[]=json_decode($usuarios,true);
+        }
+        return $arrayUsuarios;
+    }
+
+    function seteoUsuario($user,$dato){
+        $_SESSION["nombre"]=$user["nombre"];
+        $_SESSION["email"]=$user["email"];
+        $_SESSION["perfil"]=$user["perfil"];
+        $_SESSION["avatar"]=$user["avatar"];
+        if (isset($dato["remember"])) {
+            setcookie("email",$dato["email"],time()+3600);
+        }    
+    }
+
+    function validarUsuario(){
+        if ($_SESSION["email"]) {
+            return true;
+        }elseif ($_COOKIE["email"]) {
+            $_SESSION["email"]=$_COOKIE["email"];
+            return true;
+        }else {
+            return false;
+        }
     }

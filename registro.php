@@ -1,12 +1,12 @@
 <?php
 include_once("controladores/funciones.php");
 if ($_POST){
-  $errores=validar($_POST,"registro");
+  $errores=validar($_POST,"register");
   if(count($errores)==0){
     $avatar = armarAvatar($_FILES);
-    $registro = armarRegistro($_POST,$avatar);
+    $registro = crearRegistro($_POST,$avatar);
     guardar($registro);
-    header("location:login.php");
+    header("location:index.php");
     exit;
   }
 }
@@ -24,7 +24,18 @@ if ($_POST){
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    
     <div class="container">
+    <?php /*prueba*/
+      if(isset($errores)):?>
+        <ul class="alert alert-danger">
+          <?php
+          foreach ($errores as $key => $value) :?>
+            <li> <?=$value;?> </li>
+            <?php endforeach;?>
+        </ul>
+      <?php endif;?>
+
         <section class="section1">
         <div class="logo">
               <a href="index.php">
@@ -33,7 +44,7 @@ if ($_POST){
           </div>
             <article class="col-xs-12 col-md-8 col-lg-5">
                 <h1>Create account</h1> <hr>
-                <form method="POST" action="">
+                <form method="POST" action="" enctype="multipart/form-data">
                      <div class="form-group">
                             <label for="nombre">Name</label>
                             <input name="nombre" type="text" class="form-control" id="nombre" value="<?= (isset($errores["nombre"]))? "" : persistir("nombre"); ?>" placeholder="Your name here" required>
@@ -45,18 +56,22 @@ if ($_POST){
                     </div>
                     <div class="form-group">
                       <label for="contra">Password</label> <!--NAME="password"-->
-                      <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                      <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
                       <small id="olvidecontraseña" class="form-text text-muted"><p> Password must have at least 6 characters.</p></small>
                     </div>
                     <div class="form-group">
                             <label for="confirmcontra">Confirm password</label> <!--NAME="repassword"-->
-                            <input name="repassword" type="password" class="form-control" id="exampleInputPassword1" placeholder=" Confirm password" required>
+                            <input name="repass" type="password" class="form-control" id="exampleInputPassword1" placeholder=" Confirm password" required>
                             <!-- <small id="olvidecontraseña" class="form-text text-muted"><a href="">Olvido su contraseña?</a> </small> -->
                     </div>
+                    <!--PEDIDO DE AVATAR-->
+                    <input  type="file" name="avatar" value=""/>
+                    <br>
                     <!-- <div class="form-group form-check"> 
                       <input name="remember" type="checkbox" class="form-check-input" id="exampleCheck1">
                       <label class="form-check-label" for="exampleCheck1">Recuérdame.</label>
                     </div> -->
+                    <br>
                     <button type="submit" class="btn btn-outline-light">Send</button>
                     <hr>
                     <label class="cuenta" ><a href="login.php">Already have an account?</a></label>
