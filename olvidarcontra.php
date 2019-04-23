@@ -9,7 +9,6 @@
       }else{
         $newpass=$_POST["pass"];
         $userFinal=reemplazoDePass($usuario,$newpass);
-        guardar($userFinal);
         header("location:index.php");
       }
     }

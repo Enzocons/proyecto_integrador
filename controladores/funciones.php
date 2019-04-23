@@ -79,7 +79,7 @@ function validar($datos,$bandera){
         $usuario = [
             "nombre"=>$datos["nombre"],
             "email"=>$datos["email"],
-            "password"=> password_hash($datos["pass"],PASSWORD_DEFAULT),
+            "password"=> $datos["pass"],
             "avatar"=>$imagen
         ];
         return $usuario;
@@ -140,8 +140,7 @@ function validar($datos,$bandera){
     }
 
     function reemplazoDePass($user,$passnueva){
-        $usuario=[
-           "password"=>/*password_hash(*/$passnueva/*,PASSWORD_DEFAULT)*/
-        ];
-        return $usuario;
+        $user["password"]= $passnueva;
+
+        return $user;
     }
