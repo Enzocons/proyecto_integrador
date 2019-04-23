@@ -49,7 +49,7 @@ function validar($datos,$bandera){
         $ext = pathinfo($nombre,PATHINFO_EXTENSION);
         if($ext!="png" && $ext!="jpg"){
             $errores["avatar"]="Debe seleccionar archivo png ó jpg";
-        }   
+        }  
     }
 
     return $errores;
@@ -137,4 +137,11 @@ function validar($datos,$bandera){
         }else {
             return false;
         }
+    }
+
+    function reemplazoDePass($user,$passnueva){
+        $usuario=[
+           "password"=>/*password_hash(*/$passnueva/*,PASSWORD_DEFAULT)*/
+        ];
+        return $usuario;
     }
