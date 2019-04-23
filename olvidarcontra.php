@@ -9,7 +9,7 @@
       }else{
         $newpass=$_POST["pass"];
         $userFinal=reemplazoDePass($usuario,$newpass);
-        header("location:index.php");
+        header("location:contrarecuperada.php");
       }
     }
   }

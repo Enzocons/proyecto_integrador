@@ -59,6 +59,20 @@
     height: 70vw;
     
   }
+  .section1 button{
+    margin-left:125px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+  }
+
+  /*@media(min-width:992px){
+  .section1 article:hover{
+    z-index: 100;
+    height:480px;
+  }*/
+
+
   /* ---------------------------Cambios NavBar------------------------------ */
   .bg_negro {
     background-color: #000!important;
@@ -169,6 +183,11 @@ form button:hover{
     display: inline-block;
     text-align: left;
   }
+  section .precio {
+    font-size:1.5em;
+    font-weight: bolder;
+
+  }
   
 @media(min-width: 576px){
   .__container-carousel .carousel-inner .carousel-item img {
@@ -222,6 +241,7 @@ form button:hover{
     height: 25vw;
     
   }
+  
 }
 @media (min-width: 1200px){
   .__container-carousel .carousel-inner .carousel-item img {

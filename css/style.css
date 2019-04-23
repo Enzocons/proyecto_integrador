@@ -92,6 +92,9 @@ form button:hover{
       width: 24px;
       height: 24px;
     }
+    ul li{
+      font-size: 1.2em;
+    }
     .botoneslg form{
       display: none;
     }

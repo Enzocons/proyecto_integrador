@@ -8,10 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href= "css/master.css">
-    <script src="main.js"></script>
 </head>
 <body>
-  <div class="container">
 <!-- ======= -->
 <!-- <<<<<<<< HEAD:index.php -->
     <title>::BlackEye Gaming ::</title>
@@ -29,9 +27,8 @@
 <?php
     include_once 'navBar.php'
     ?>
-  <div class="container-fluid p-0">
 <!-- ======== -->
-  <div class="container">
+  <div class="container-fluid p-0">
 <!-- >>>>>>>>:index.html
 >>>>>>>  -->
     <section class="__container-carousel">
@@ -72,16 +69,22 @@
                 <img src="img/razer4.jpg" class="img-fluid  rounded" alt="Responsive image">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, excepturi!
                 </p>
+                <p class="precio">$1500</p>
+                <button type="button" class="btn btn-primary">Comprar</button>
               </article>
               <article class="article2 col-xs-12 col-sm-6 col-md-5 col-lg-3 col-xl-3 p-0">
                 <img src="img/razer2.jpg" class="img-fluid rounded" alt="Responsive image">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, excepturi!
                   </p>
+                <p class="precio">$1600</p>
+                <button type="button" class="btn btn-primary">Comprar</button>
               </article>
               <article class="article3 col-xs-12 col-sm-6 col-md-5 col-lg-3 col-xl-3 p-0">
                 <img src="img/razer3.jpg" class="img-fluid rounded" alt="Responsive image">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, excepturi!
                   </p>
+                <p class="precio">$1300</p>
+                <button type="button" class="btn btn-primary">Comprar</button>
               </article>
         </section>
         <section class="section2">
@@ -89,11 +92,10 @@
               <img src="img/razer.jpg" alt="Responsive image">
           </article>
         </section>
-    </div>
-
-    <?php
+        <?php
     include_once 'footer.php'
     ?>
+    </div>
 
 <!-- <<<<<<< HEAD
 =======
