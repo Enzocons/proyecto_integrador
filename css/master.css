@@ -3,7 +3,9 @@
     margin: 0 auto;
     padding: 0;
 }
-
+.__container-carousel{
+  margin-top: 135px;
+}
   .__container-carousel .carousel-inner .carousel-item img {
     height:100vw;
 
@@ -67,6 +69,9 @@
     border-style: solid;
     margin: 3px;
   }
+   ul li{
+    font-size: 1.2em;
+  }
 
   .dropdown-item{
     background: black;
@@ -104,9 +109,55 @@ form button:hover{
   width: 24px;
   height: 24px;
 }
+.botoneslg form{
+  display: none;
+}
+.profile2 img{
+  width: 20px;
+  height: 20px;
+}
 .dropdown img{
   width: 24px;
   height: 24px;
+
+}
+.logo img{
+  width: 100px;
+  height: 100px;
+  margin-left: 80px;
+}
+/*.navbar-toggler.collapsed{
+  position: absolute;
+}*/
+/*.navbar-toggler.collapsed {
+
+    width: 100ox;
+    width: 10000px;
+    position: absolute;
+    top: 45px;
+    height: 40px;
+
+}*/
+@media(min-width:576px){
+  .logo img{
+    margin-left:125px;
+  }
+}
+@media(min-width:768px){
+  .logo img{
+    margin-left:170px;
+  }
+}
+@media(min-width:992px){
+  .logo img{
+    margin: 0 auto;
+  }
+  .botoneslg form{
+    display: flex;
+  }
+  .botonesxs form{
+    display: none;
+  }
 }
 
   /* --------------------------Cambios estilos de texto------------------------- */
@@ -192,6 +243,7 @@ form button:hover{
     background-color: #272727;
     width: 50vw;
     /* flex-wrap: wrap; */
+    margin-top: 135px;
  }
  .articlecontact{
    justify-content: center;
@@ -203,6 +255,7 @@ form button:hover{
   width: 100%;
   margin-bottom: 20px;
  }
+ 
 
  /* .contactForm{
   display: flex;

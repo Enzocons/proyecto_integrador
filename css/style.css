@@ -7,6 +7,7 @@ body{
     background-color: black;
     color: #c7c7c7;
 }
+
 @font-face{
     font-family:'beyno';
     src: url('../fonts/beyno/BEYNO.OTF') format('opentype'); 
@@ -21,7 +22,7 @@ body{
   }
 .sectionmain{
     background-color: #272727;
-    margin-top: 1em;
+    margin-top: 135px;
 }
 section h1{
     text-align: center;
@@ -86,6 +87,62 @@ form button:hover{
     background: black;
     color: white;
     }
+    /*----- Codigo Igual en MAster.css DESP si hacemos los import borrarlo*/
+    .profile img{
+      width: 24px;
+      height: 24px;
+    }
+    .botoneslg form{
+      display: none;
+    }
+    .profile2 img{
+      width: 20px;
+      height: 20px;
+    }
+    .dropdown img{
+      width: 24px;
+      height: 24px;
+    
+    }
+    .logo img{
+      width: 100px;
+      height: 100px;
+      margin-left: 80px;
+    }
+    /*.navbar-toggler.collapsed{
+      position: absolute;
+    }*/
+    /*.navbar-toggler.collapsed {
+    
+        width: 100ox;
+        width: 10000px;
+        position: absolute;
+        top: 45px;
+        height: 40px;
+    
+    }*/
+    @media(min-width:576px){
+      .logo img{
+        margin-left:125px;
+      }
+    }
+    @media(min-width:768px){
+      .logo img{
+        margin-left:170px;
+      }
+    }
+    @media(min-width:992px){
+      .logo img{
+        margin: 0 auto;
+      }
+      .botoneslg form{
+        display: flex;
+      }
+      .botonesxs form{
+        display: none;
+      }
+    }
+    /*-------------------*/
 /*-----Footer------*/
  
 .container-footer-all{
