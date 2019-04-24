@@ -1,3 +1,20 @@
+<?php
+  include_once("controladores/funciones.php");
+  if ($_POST) {
+    $errores=validar($_POST,"olvidepass");
+    if (count($errores)==0) {
+      $usuario=buscarEmail($_POST["email"]);
+      if($usuario==null){
+        $errores["email"]="El usuario no existe";
+      }else{
+        $newpass=$_POST["pass"];
+        $userFinal=reemplazoDePass($usuario,$newpass);
+        header("location:contrarecuperada.php");
+      }
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,6 +27,15 @@
 </head>
 <body>
     <div class="container">
+    <?php /*prueba*/
+      if(isset($errores)):?>
+        <ul class="alert alert-danger">
+          <?php
+          foreach ($errores as $key => $value) :?>
+            <li> <?=$value;?> </li>
+            <?php endforeach;?>
+        </ul>
+      <?php endif;?>
         <section class="section1 col-xs-12 col-md-12 col-lg-12">
           <div class="logo">
              <a href="index.php">
@@ -26,12 +52,12 @@
                     </div>
                     <div class="form-group">
                       <label for="newcontra">New Password</label> <!--NAME="newpass"-->
-                      <input name="newpass" type="password" class="form-control" id="exampleInputPassword1" placeholder="New Password" required>
+                      <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="New Password" required>
                       <small id="olvidecontraseña" class="form-text text-muted"><p> Password must have at least 6 characters.</p></small>
                     </div>
                     <div class="form-group">
                             <label for="newconfirmcontra">Confirm New password</label> <!--NAME="newrepassword"-->
-                            <input name="newrepassword" type="password" class="form-control" id="exampleInputPassword1" placeholder=" Confirm New password" required>
+                            <input name="repass" type="password" class="form-control" id="exampleInputPassword1" placeholder=" Confirm New password" required>
                     </div>
                     <div class="send">
                         <button type="submit" class="btn btn-outline-light">Send</button>

@@ -12,10 +12,10 @@
         <link rel="stylesheet" href="css/master.css">
 </head>
 <body>
-    <?php
-    include_once 'navBar.php';
-    ?>
-    <div class="containerContact">
+    <div class="container" >
+        <?php
+        include_once 'navBar.php';
+        ?>
         <section class="sectioncontact col-xs-12 col-md-12 col-lg-12">
             <article class="articlecontact col-xs-12 col-md-12 col-lg-12">
                 <h2 class="titulosDePaginas">Want to contact us?</h2>

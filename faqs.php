@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <?php 
+    <div class="container">
+        <?php 
         include_once("navBar.php");
         ?>
-    <div class="container">
         <section class="sectionmain col-xs-12 col-md-12 col-lg-12">
             <h1>FAQs</h1> 
             <article>
