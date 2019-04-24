@@ -46,7 +46,7 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button type="submit" <i class="fas fa-search"></i> </button>
       <a href="login.php" <i class="fas fa-user-alt" role="button"></a>
-      <button type="button" <i class="fas fa-shopping-cart"></i></button>
+      <a href="carrito.php" <i class="fas fa-shopping-cart" role="button"></a>
       
     </form>
   </div>
