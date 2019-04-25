@@ -75,7 +75,7 @@ function validar($datos,$bandera){
         return $avatar;
     }
     
-    function crearRegistro($datos){
+    function crearRegistro($datos,$imagen){
         $usuario = [
             "nombre"=>$datos["nombre"],
             "email"=>$datos["email"],
