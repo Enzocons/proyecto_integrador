@@ -4,7 +4,7 @@
   <header>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:rgb(32,32,32)">
   <!--IMG LOGO-->
-  <div class="logo"><img src="img/logo.svg" alt=""></div>
+  <div class="logo"><a href="index.php"><img src="img/logo.svg" alt=""></a></div>
   <div class="botonesxs">
       <form class="form-inline my-2 my-lg-0">
        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->

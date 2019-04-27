@@ -23,7 +23,7 @@ function validar($datos,$bandera){
         $errores["email"]="Invalid email";
     }
     if ($bandera=="register") {
-         if ($erroremail=true) {
+         if ($erroremail==true) {
             $errores["email"]="esta cuenta ya esta registrada";
         }
     }
@@ -75,25 +75,27 @@ function validar($datos,$bandera){
         return $avatar;
     }
     
-    function crearRegistro($datos){
+    function crearRegistro($datos,$imagen){
         $usuario = [
             "nombre"=>$datos["nombre"],
             "email"=>$datos["email"],
-            "password"=> $datos["pass"],
+            "password"=>password_hash($datos["pass"],PASSWORD_DEFAULT),
             "avatar"=>$imagen
         ];
         return $usuario;
     }
     
-    function guardar($usuario){
+    function guardar($usuario,$bandera3){
+      if ($bandera3=="register") {
         $jsusuario = json_encode($usuario);
-        file_put_contents("usuarios.json", $jsusuario . PHP_EOL ,FILE_APPEND);
+        file_put_contents("usuarios.json", $jsusuario . PHP_EOL , FILE_APPEND);
+      }
     }
 
-    function buscarEmail($email){
+    function buscarEmail($email,$newpass){
         $usuarios=abrirBaseDeDatos();
         foreach ($usuarios as $usuario) {
-          if ($email===$usuario["email"]) {
+          if ($email==$usuario["email"]) {
               return $usuario;
           }
         }
@@ -139,8 +141,25 @@ function validar($datos,$bandera){
         }
     }
 
-    function reemplazoDePass($user,$passnueva){
-        $user["password"]= $passnueva;
-
-        return $user;
+    
+    function cambiopass($email,$newpass){
+        $usuarios=abrirBaseDeDatos();
+        $usuariosnuevos=[];
+        unlink("usuarios.json");
+        foreach ($usuarios as $usuario) {
+          if($email===$usuario["email"]){
+            $usuarionuevo=[
+                  "nombre"=>$usuario["nombre"],
+                  "email"=>$usuario["email"],
+                  "password"=>password_hash($newpass,PASSWORD_DEFAULT),
+                  "avatar"=>$usuario["avatar"]
+                ];
+          }else{$usuarionuevo=$usuario;}
+          $usuariosnuevos[]=$usuarionuevo;
+          
+        }
+       foreach ($usuariosnuevos as $usuario) {
+        $jsusuario = json_encode($usuario);
+        file_put_contents("usuarios.json", $jsusuario . PHP_EOL, FILE_APPEND );
+       }
     }
