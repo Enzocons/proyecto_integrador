@@ -404,16 +404,17 @@ a{
   border-style: solid;
   border-color: #9033A8;
   border-width: 1px;
-  width: 70vw;
+  width: 90vw;
   position: relative;
-  height: 30vw;
+  height: 60vh;
+  padding:0;
 }
 .avataredit{
   background-color: #000;
-  width: 220px;
+  max-width: 40%;
   position: absolute;
   top:20px;
-  right: 65px;
+  right: 20px;
   border-style:solid;
   border-color: #9033A8;
   border-width: 1px;
@@ -423,7 +424,10 @@ a{
 
 .edit2{
   position: absolute;
-  top:10px;
+  top:15px;
+  left:10px;
+  max-width: 40%;
+  padding: 0;
 }
 
 .labelemail{
@@ -433,6 +437,7 @@ a{
 .edit3{
   position: absolute;
   bottom: 10px;
+  padding: 0;
 }
 .edit3 hr{
   border-color: #9033A8;
@@ -462,8 +467,8 @@ a{
   box-shadow: none;
 }
 .edit3 .eliminar{
-  margin-right:310px;
-  margin-left:15px;
+  margin-right:40%;
+  margin-left:2%;
   background-color:#000;
   color:#9033A8;
   border-style: solid;
@@ -520,13 +525,59 @@ a{
   text-decoration: none;
 }
 
-@media (min-width:992px){
-  .edit{
-  width: 50vw;
+
+@media(min-width:992px){
+  .edit3 .eliminar{
+    margin-right:50%;
+
+}
+}
+@media(min-width:1200px){
+  .edit3 .eliminar{
+  margin-right:45%;
+
+}
+}
+
+@media(max-width:605px){
+  .avataredit{
+    max-width: 85%;
+    position: relative;
+    padding:10px;
+    display: flex;
+    margin-left: 30px;
   }
   .edit2{
-    position: absolute;
-    
+    position:relative;
+    top:15px;
+    left:0;
+    max-width: 65%;
+    margin-left: 15px;
+  }
+  .edit{
+    height: 70vh;
+  }
+  .edit3{
+    position: relative;
+    top:20px;
+
+  }
+  .edit3 .eliminar{
+    margin-right: 29%;
+  }
+
+}
+@media(max-width:509px){
+  .edit3 .eliminar{
+    margin-right: 0;
   }
 }
+@media(max-width:540px){
+  .edit{
+    height: 90vh;
+  }
+}
+
+
+
 
