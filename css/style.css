@@ -93,14 +93,14 @@ form button:hover{
       height: 24px;
     }
     ul li{
-      font-size: 1.2em;
+      font-size: 0.9em;
     }
     .botoneslg form{
       display: none;
     }
     .profile2 img{
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
     }
     .dropdown img{
       width: 24px;
@@ -110,7 +110,7 @@ form button:hover{
     .logo img{
       width: 100px;
       height: 100px;
-      margin-left: 80px;
+      margin-left:20px;
     }
     /*.navbar-toggler.collapsed{
       position: absolute;
@@ -124,25 +124,32 @@ form button:hover{
         height: 40px;
     
     }*/
-    @media(min-width:576px){
+    @media(min-width:512px){
       .logo img{
-        margin-left:125px;
+        margin-left: 78px;
       }
     }
     @media(min-width:768px){
       .logo img{
-        margin-left:170px;
+      margin-left: 168px;
       }
+      ul li{
+        font-size: 1.2em;
+      }
+    
     }
     @media(min-width:992px){
       .logo img{
-        margin: 0 auto;
-      }
+        margin-left: 0;
+        }
       .botoneslg form{
         display: flex;
       }
       .botonesxs form{
         display: none;
+      }
+      ul li{
+        font-size: 1.2em;
       }
     }
     /*-------------------*/
