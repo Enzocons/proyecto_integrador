@@ -23,9 +23,12 @@ function validar($datos,$bandera){
         $errores["email"]="Invalid email";
     }
     if ($bandera=="register") {
-         if ($erroremail==true) {
-            $errores["email"]="esta cuenta ya esta registrada";
-        }
+        $user=abrirBaseDeDatos();
+        foreach ($user as $usuario) {
+            if ($email==$usuario["email"]) {
+                $errores["email"]="Este usuario ya esta registrado";
+            }
+        }  
     }
     $pass=trim($datos["pass"]);
     if (isset($datos["repass"])) {
@@ -100,14 +103,6 @@ function validar($datos,$bandera){
           }
         }
         return null;
-    }
-    function emailencontrado($email){
-        $user=abrirBaseDeDatos();
-        foreach ($user as $usuario) {
-            if ($email===$usuario["email"]) {
-                $erroremail=true;
-            }
-        }
     }
 
     function abrirBaseDeDatos(){

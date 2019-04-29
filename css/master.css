@@ -83,8 +83,11 @@
     border-style: solid;
     margin: 3px;
   }
+  .navbar-nav{
+    flex-direction: row;
+  }
    ul li{
-    font-size: 1.2em;
+    font-size: 0.9em;
   }
 
   .dropdown-item{
@@ -94,6 +97,9 @@
 
   .dropdown-menu{
     background-color: black;
+  }
+  .navbar-nav .dropdown-menu{
+    position: absolute;
   }
 
   header a{
@@ -112,11 +118,11 @@
     border-color: buttonface;
     border-image: initial;
 }  
-form a:hover{
+nav form a:hover{
   color: buttontext;
   box-shadow: 0.1em 0em 0.5em 0.07em #00FFFF;
 }
-form button:hover{
+nav form button:hover{
   box-shadow: 0em 0em 0.5em 0.07em #00FFFF;
 }
 .profile img{
@@ -127,8 +133,8 @@ form button:hover{
   display: none;
 }
 .profile2 img{
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 .dropdown img{
   width: 24px;
@@ -138,7 +144,7 @@ form button:hover{
 .logo img{
   width: 100px;
   height: 100px;
-  margin-left: 80px;
+  margin-left: 20px;
 }
 /*.navbar-toggler.collapsed{
   position: absolute;
@@ -152,25 +158,29 @@ form button:hover{
     height: 40px;
 
 }*/
-@media(min-width:576px){
+@media(min-width:512px){
   .logo img{
-    margin-left:125px;
+    margin-left: 78px;
   }
 }
 @media(min-width:768px){
   .logo img{
-    margin-left:170px;
+  margin-left: 168px;
   }
+
 }
 @media(min-width:992px){
   .logo img{
-    margin: 0 auto;
-  }
+    margin-left: 0;
+    }
   .botoneslg form{
     display: flex;
   }
   .botonesxs form{
     display: none;
+  }
+  ul li{
+    font-size: 1.2em;
   }
 }
 
@@ -386,3 +396,188 @@ a{
     max-width: 100vw;
   }
 }
+
+/* --------------------------Cambios Editar Perfil------------------------- */
+
+.edit{
+  margin-top:150px;
+  border-style: solid;
+  border-color: #9033A8;
+  border-width: 1px;
+  width: 90vw;
+  position: relative;
+  height: 60vh;
+  padding:0;
+}
+.avataredit{
+  background-color: #000;
+  max-width: 40%;
+  position: absolute;
+  top:20px;
+  right: 20px;
+  border-style:solid;
+  border-color: #9033A8;
+  border-width: 1px;
+  color: #9033A8;
+  padding:10px;
+}
+
+.edit2{
+  position: absolute;
+  top:15px;
+  left:10px;
+  max-width: 40%;
+  padding: 0;
+}
+
+.labelemail{
+  margin-top:20px;
+}
+
+.edit3{
+  position: absolute;
+  bottom: 10px;
+  padding: 0;
+}
+.edit3 hr{
+  border-color: #9033A8;
+}
+
+.label{
+  color:#D5D5D5;
+}
+.edit .form-control:focus{
+  background-color: #000;
+  border-color: #9033A8;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-width: 1px;
+  color: #9033A8;
+  box-shadow: none;
+}
+.edit .form-control{
+  background-color: #000;
+  border-color: #D5D5D5;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-width: 1px;
+  color: #D5D5D5;
+  box-shadow: none;
+}
+.edit3 .eliminar{
+  margin-right:40%;
+  margin-left:2%;
+  background-color:#000;
+  color:#9033A8;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #9033A8;
+  padding:10px;
+  border-radius: 15px;
+}
+.edit3 .eliminar:hover{
+  border-color:#B90000;
+  color:#B90000;
+}
+.edit3 .cancelar{
+  margin-right:15px;
+  background-color:#000;
+  color:#9033A8;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #9033A8;
+  padding:10px;
+  border-radius:15px;
+}
+.edit3 .cancelar:hover{
+  border-color:#D5D5D5;
+  color:#D5D5D5;
+}
+.edit3 .guardar{
+  background-color:#000;
+  color:#9033A8;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #9033A8;
+  padding:10px;
+  border-radius:15px;
+}
+.edit3 .guardar:hover{
+  border-color:#00FF00;
+  color:#00FF00;
+}
+.cambiarcontra{
+  margin-top:30px;
+
+}
+.cambiarcontra a{
+  background-color:#000;
+  color:#9033A8;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #9033A8;
+  padding:10px;
+}
+.cambiarcontra a:hover{
+  border-width:2px;
+  text-decoration: none;
+}
+
+
+@media(min-width:992px){
+  .edit3 .eliminar{
+    margin-right:50%;
+
+}
+}
+@media(min-width:1200px){
+  .edit3 .eliminar{
+  margin-right:45%;
+
+}
+}
+
+@media(max-width:605px){
+  .avataredit{
+    max-width: 85%;
+    position: relative;
+    padding:10px;
+    display: flex;
+    margin-left: 30px;
+  }
+  .edit2{
+    position:relative;
+    top:15px;
+    left:0;
+    max-width: 65%;
+    margin-left: 15px;
+  }
+  .edit{
+    height: 70vh;
+  }
+  .edit3{
+    position: relative;
+    top:20px;
+
+  }
+  .edit3 .eliminar{
+    margin-right: 29%;
+  }
+
+}
+@media(max-width:509px){
+  .edit3 .eliminar{
+    margin-right: 0;
+  }
+}
+@media(max-width:540px){
+  .edit{
+    height: 90vh;
+  }
+}
+
+
+
+
