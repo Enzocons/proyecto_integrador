@@ -2,33 +2,32 @@
 
   <div class="container-fluid p-0"> 
   <header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:rgb(32,32,32)">
-  <!--IMG LOGO-->
-  <div class="logo"><a href="index.php"><img src="img/logo.svg" alt=""></a></div>
-  <div class="botonesxs">
-      <form class="form-inline my-2 my-lg-0">
-       <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
-        <button type="submit"class="profile"><img src="img/search.png" alt=""></button>
-        <div class="dropdown">
-            <button class=" dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="profile">
-            <img src="img/profile.png" alt="">
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="login.php">Login</a>
-              <a class="dropdown-item" href="registro.php">Register</a>
-            </div>
-            </div>
-        <button type="button" class="profile2"><img src="img/carrito.png" alt=""></button>
-    </form>
-  </div>
-  <!---->
-  <a class="navbar-brand" href="#" img></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <ul class="navbar-nav mr-auto">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top mx-auto" style="background-color:rgb(32,32,32)">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--IMG LOGO-->
+      <div class="logo mx-auto"><a href="index.php"><img src="img/logo.svg" alt=""></a></div>
+      <div class="botonesxs">
+          <form class="form-inline my-2 my-lg-0">
+           <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <button type="submit"class="profile"><img src="img/search.png" alt=""></button>
+            <div class="dropdown">
+                <button class=" dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="profile">
+                <img src="img/profile.png" alt="">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="login.php">Login</a>
+                  <a class="dropdown-item" href="registro.php">Register</a>
+                </div>
+                </div>
+            <button type="button" class="profile2"><img src="img/carrito.png" alt=""></button>
+        </form>
+      </div>
+      <!---->
+      
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <ul class="navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>

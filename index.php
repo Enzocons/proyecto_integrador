@@ -41,13 +41,13 @@
             </ol>
         <div class="carousel-inner">
           <div class="carousel-item active slide1">
-              <img src="img/imagen1.jpg" class="d-block w-100" alt="...">
+              <img src="img/product-1.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item slide2">
-              <img src="img/imagen2.jpg" class="d-block w-100" alt="...">
+              <img src="img/product-2.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item slide3">
-              <img src="img/imagen3.jpg" class="d-block w-100" alt="...">
+              <img src="img/product-3.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
