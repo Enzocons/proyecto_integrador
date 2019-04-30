@@ -12,6 +12,8 @@
         <link rel="stylesheet" type="text/css" media="screen" href="css/master.css">
         <link rel="stylesheet" href="css/master.css">
         <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/navBar.css">
+        <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <div class="container" >
