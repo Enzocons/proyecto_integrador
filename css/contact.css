@@ -1,0 +1,35 @@
+/* --------------------------Cambios Contact------------------------- */
+.sectioncontact{
+    display: flex;
+    background-color: #272727;
+    width: 50vw;
+    /* flex-wrap: wrap; */
+    margin-top: 135px;
+ }
+ .articlecontact{
+   justify-content: center;
+   justify-items: center;
+   
+ }
+ iframe{
+  height: 20em;
+  width: 100%;
+  margin-bottom: 20px;
+ }
+ 
+
+ /* .contactForm{
+  display: flex;
+  background-color: #C7C7C7;
+  flex-wrap: nowrap;
+ } */
+ .titulosDePaginas{
+   color: #c7c7c7;
+   font-family: 'neutra-bookalt';
+ }
+
+ @media (max-width:768px){
+   .sectioncontact{
+     width: 100vw;
+   }
+ }

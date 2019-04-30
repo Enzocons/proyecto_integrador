@@ -71,7 +71,6 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="login.php">Login</a>
               <a class="dropdown-item" href="registro.php">Register</a>
-              <a href="carrito.php" <i class="fas fa-shopping-cart" role="button"></a>
             </div>
             </div>
         <button type="button" class="profile"><img src="img/carrito.png" alt=""></button>

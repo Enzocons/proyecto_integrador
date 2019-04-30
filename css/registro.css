@@ -1,4 +1,4 @@
-/* *{
+*{
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
@@ -6,8 +6,12 @@
 body{
     background-color: black;
     color: #c7c7c7;
-    font-family: 'Neutra-demialt';
+    font-family: 'neutra-bookalt';
 }
+@font-face{
+    font-family:'neutra-bookalt';
+    src: url('../fonts/neutra/NEUTRATEXT-BOOKALT.OTF') format('opentype'); 
+ }
 @font-face{
 	font-family: 'amethyst'; 
 	src: url('Fonts/Amethyst/Amethyst.ttf') format('truetype'); 
@@ -80,4 +84,4 @@ small p{color: #c7c7c7;}
 
 .logo img:hover{
     opacity: 0.7;
-} */
+}
