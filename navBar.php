@@ -1,3 +1,6 @@
+<?php
+include_once("controladores/funciones.php");
+?>
 <!-- ---------- Include para la navBar--------------- -->
 
   <div class="container-fluid p-0"> 
@@ -69,8 +72,15 @@
             <img src="img/profile.png" alt="">
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="login.php">Login</a>
-              <a class="dropdown-item" href="registro.php">Register</a>
+              <?php
+                if (isset($_SESSION["email"])==null) {
+                   echo"<a class='dropdown-item' href='login.php'>Login</a>";
+                   echo"<a class='dropdown-item' href='registro.php'>Register</a>";
+                }else{
+                 echo" <a class='dropdown-item' href='editarperfil.php'>Perfil</a>";
+                 echo" <a class='dropdown-item' href='logout.php'>log out</a>";
+                }
+              ?>
             </div>
             </div>
         <button type="button" class="profile"><img src="img/carrito.png" alt=""></button>

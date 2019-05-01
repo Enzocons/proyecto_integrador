@@ -27,16 +27,7 @@
     <link rel="stylesheet" href="css/olvidarContraseña.css">
 </head>
 <body>
-    <div class="container">
-    <?php /*prueba*/
-      if(isset($errores)):?>
-        <ul class="alert alert-danger">
-          <?php
-          foreach ($errores as $key => $value) :?>
-            <li> <?=$value;?> </li>
-            <?php endforeach;?>
-        </ul>
-      <?php endif;?>
+    <div class="container edit">
         <section class="section1 col-xs-12 col-md-12 col-lg-12">
           <div class="logo">
              <a href="index.php">
@@ -49,19 +40,23 @@
                     <div class="form-group">
                       <label for="email">Email</label> <!--NAME="email"-->
                       <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insert email" required>
+                      <span class="errores"> <?= isset($errores["email"])?$errores["email"]:null; ?> </span>
                       <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group">
                       <label for="newcontra">New Password</label> <!--NAME="newpass"-->
                       <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="New Password" required>
+                      <span class="errores"> <?= isset($errores["pass"])?$errores["pass"]:null; ?> </span>
                       <small id="olvidecontraseña" class="form-text text-muted"><p> Password must have at least 6 characters.</p></small>
                     </div>
                     <div class="form-group">
-                            <label for="newconfirmcontra">Confirm New password</label> <!--NAME="newrepassword"-->
+                            <label for="newconfirmcontra">Confirm New password</label> 
+                            <span class="errores"><!--NAME="newrepassword"-->
                             <input name="repass" type="password" class="form-control" id="exampleInputPassword1" placeholder=" Confirm New password" required>
+                            <span class="errores"> <?= isset($errores["repass"])?$errores["repass"]:null; ?> </span>
                     </div>
                     <div class="send">
-                        <button type="submit" class="btn btn-outline-light">Send</button>
+                        <button type="submit" class="btn btn-outline-light send">Send</button>
                     </div>
                     </div>
                     

@@ -20,24 +20,47 @@ body{
 	font-family: 'futura'; 
 	src: url('Fonts/Futura/FuturaStd-Light.otf') format('opentype'); 
 }
-article{background-color:#272727;
+article{
+    /*background-color:#272727;*/
     flex-direction: column;
     margin-top: 0em;
     padding: 1em;
-    border: 1em;
+    border: solid;
+    border-width: 1px;
+    border-color: #9033A8;
     font-weight: bolder;
-    box-shadow: 0.2em 0em 0.8em 0.08em #00FFFF;}
+   /* box-shadow: 0.2em 0em 0.8em 0.08em #00FFFF;}*/
+}
 
-
-.logo1{
+.logo{
     display: flex;
     justify-content: center;
 }
-.logo1 img{
-    height:15vw;
-}
-    
 
+.send{
+    border-color: #9033A8;
+    color: #9033A8;
+}
+.send:hover{
+    background-color: black;
+    border-radius: 15%;
+    color: white;
+}
+.edit .form-control{
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    background-color: black;
+    color: white;
+}
+
+.edit .form-control:focus{
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-color: #9033A8;
+    box-shadow: none;
+}
 hr { 
     display: flex;
     margin-top: 0.5em;
@@ -45,7 +68,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     border-width: 0.1em;
-    border-color: black;
+    border-color: #9033A8;
   }
 .cuenta a{
     color: #c7c7c7;
@@ -55,23 +78,34 @@ small p{color: #c7c7c7;}
 
 
 .logo img{
-    height: 60vw;  
+    height: 50vw;  
 }
 .logo{
     display: flex;
     justify-content: center;
 }
 @media (min-width:768px){
-    .logo img{
-        height: 30vw;
+     .edit .logo img{
+        height: 25vw;
     }
 }
+
 @media(min-width:1024px){
-    .logo img{
+    .edit .logo img{
         height: 20vw;
+    }
+}
+
+@media(min-width:500px){
+     .logo img{
+        height: 40vw;
     }
 }
 
 .logo img:hover{
     opacity: 0.7;
+}
+
+.errores{
+    color: red;
 }

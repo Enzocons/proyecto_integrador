@@ -20,15 +20,18 @@ body{
 	font-family: 'futura'; 
 	src: url('Fonts/Futura/FuturaStd-Light.otf') format('opentype'); 
 }
-article{background-color:#272727;
+article{
+    background-color:black;
     flex-direction: column;
     margin-top: 0em;
     padding: 1em;
-    border: 1em;
+    border: solid;
+    border-width: 1px;
+    border-color: #9033A8;
     font-weight: bolder;
-    box-shadow: 0.2em 0em 0.8em 0.08em #00FFFF;}
-
-.articleR{background-color:#272727;
+    /*box-shadow: 0.2em 0em 0.8em 0.08em #00FFFF;}*/
+}
+/*.articleR{background-color:#272727;
     flex-direction: column;
     margin-top:2%;
     padding: 1em;
@@ -38,7 +41,7 @@ article{background-color:#272727;
     text-align: center;
     align-content: center;
     width: 60vw;
-}
+}*/
 .logo1{
     display: flex;
     justify-content: center;
@@ -46,7 +49,30 @@ article{background-color:#272727;
 .logo1 img{
     height:15vw;
 }
-    
+.edit .form-control{
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    background-color: black;
+    color: white;
+}
+.edit .form-control:focus{
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-color: #9033A8;
+    box-shadow: none;
+}
+
+.send{
+    border-color: #9033A8;
+    color: #9033A8;
+}
+.send:hover{
+    background-color: black;
+    border-radius: 15%;
+    color: white;
+}
 
 hr { 
     display: flex;
@@ -55,7 +81,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     border-width: 0.1em;
-    border-color: black;
+    border-color: #9033A8;
   }
 .cuenta a{
     color: #c7c7c7;
@@ -72,16 +98,24 @@ small p{color: #c7c7c7;}
     justify-content: center;
 }
 @media (min-width:768px){
-    .logo img{
-        height: 30vw;
+    .edit .logo img{
+        height: 25vw;
     }
 }
 @media(min-width:1024px){
-    .logo img{
+    .edit .logo img{
         height: 20vw;
     }
+}
+@media(min-width:500px){
+    .logo img{
+       height: 40vw;
+   }
 }
 
 .logo img:hover{
     opacity: 0.7;
+}
+.errores{
+    color: red;
 }

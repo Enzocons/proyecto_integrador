@@ -20,21 +20,24 @@ body{
 	font-family: 'futura'; 
 	src: url('Fonts/Futura/FuturaStd-Light.otf') format('opentype'); 
 }
-article{background-color:#272727;
+/*article{background-color:black;
     flex-direction: column;
     margin-top: 0em;
     padding: 1em;
     border: 1em;
     font-weight: bolder;
-    box-shadow: 0.2em 0em 0.8em 0.08em #00FFFF;}
+    box-shadow: 0.2em 0em 0.8em 0.08em #00FFFF;
+}*/
 
-.articleR{background-color:#272727;
+.articleR{background-color:black;
     flex-direction: column;
     margin-top:2%;
     padding: 1em;
-    border: 1em;
+    border: 1px;
+    border: solid;
+    border-color: #00FF00;
     font-weight: bolder;
-    box-shadow: 0.2em 0em 0.8em 0.08em #00FF00;
+   /* box-shadow: 0.2em 0em 0.8em 0.08em #00FF00;*/
     text-align: center;
     align-content: center;
     width: 60vw;
@@ -55,7 +58,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     border-width: 0.1em;
-    border-color: black;
+    border-color: #00FF00;
   }
 .cuenta a{
     color: #c7c7c7;

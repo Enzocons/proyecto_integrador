@@ -35,16 +35,7 @@
     <link rel="stylesheet" href="css/logIn.css">
 </head>
 <body>
-    <div class="container">
-    <?php /*prueba*/
-      if(isset($errores)):?>
-        <ul class="alert alert-danger">
-          <?php
-          foreach ($errores as $key => $value) :?>
-            <li> <?=$value;?> </li>
-            <?php endforeach;?>
-        </ul>
-      <?php endif;?>
+    <div class="container edit">
         <section class="section1 col-xs-12 col-md-12 col-lg-12">
           <div class="logo">
              <a href="index.php">
@@ -58,10 +49,12 @@
                       <label for="email">Email</label> <!--NAME="email"-->
                       <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insert email" required>
                       <small id="emailHelp" class="form-text text-muted"></small>
+                      <span class="errores"> <?= isset($errores["email"])?$errores["email"]:null; ?> </span>
                     </div>
                     <div class="form-group">
                       <label for="contra">Password</label> <!--NAME="pass"-->
                       <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                      <span class="errores"> <?= isset($errores["pass"])?$errores["pass"]:null; ?> </span>
                       <small id="olvidecontraseña" class="form-text text-muted"><p> Password must have at least 6 characters.</p></small>
                       <small id="olvidecontraseña" class="form-text text-muted"><a href="olvidarcontra.php">Forgot your password?</a> </small>
                     </div>
@@ -70,7 +63,7 @@
                       <label class="form-check-label" for="exampleCheck1">Remember me</label>
             
                     </div>
-                    <button type="submit" class="btn btn-outline-light">Send</button>
+                    <button type="submit" class="btn btn-outline-light send">Send</button>
                     <hr>
                     <label class="cuenta" ><a href="registro.php">New here?</a></label>
                   </form>
