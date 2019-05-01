@@ -1,0 +1,110 @@
+/* ---------------------------Cambios NavBar------------------------------ */
+.bg_negro {
+    background-color: #000!important;
+}
+
+  .button {
+    border-width: 9px;
+    border-style: solid;
+    margin: 3px;
+  }
+  .navbar-nav{
+    flex-direction: row;
+  }
+   ul li{
+    font-size: 0.9em;
+  }
+
+  .dropdown-item{
+    background: black;
+    color: white;
+  }
+
+  .dropdown-menu{
+    background-color: black;
+  }
+  .navbar-nav .dropdown-menu{
+    position: absolute;
+  }
+
+  header a{
+    font-family: 'neutra-bookalt';
+  }
+
+  form a{
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: buttonface;
+    border-image: initial;
+}  
+nav form a:hover{
+  color: buttontext;
+  box-shadow: 0.1em 0em 0.5em 0.07em #00FFFF;
+}
+nav form button:hover{
+  box-shadow: 0em 0em 0.5em 0.07em #00FFFF;
+}
+.profile img{
+  width: 24px;
+  height: 24px;
+}
+.botoneslg form{
+  display: none;
+}
+.profile2 img{
+  width: 24px;
+  height: 24px;
+}
+.dropdown img{
+  width: 24px;
+  height: 24px;
+
+}
+.logo img{
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+}
+/*.navbar-toggler.collapsed{
+  position: absolute;
+}*/
+/*.navbar-toggler.collapsed {
+
+    width: 100ox;
+    width: 10000px;
+    position: absolute;
+    top: 45px;
+    height: 40px;
+
+}*/
+@media(min-width:512px){
+  .logo img{
+    margin-left: 78px;
+  }
+}
+@media(min-width:768px){
+  .logo img{
+  margin-left: 168px;
+  }
+
+}
+@media(min-width:992px){
+  .logo img{
+    margin-left: 0;
+    }
+  .botoneslg form{
+    display: flex;
+  }
+  .botonesxs form{
+    display: none;
+  }
+  ul li{
+    font-size: 1.2em;
+  }
+}

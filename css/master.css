@@ -1,3 +1,8 @@
+/* Deje por las dudas el resto de las cosas comentadas. sin embargo chequee y todo funciona. En caso de que me haya olvidados pueden fijarse acá y modifiquenlo en el respectivo css. 
+-Pau  <3  */
+
+
+
 * {
     box-sizing: border-box;
     margin: 0 auto;
@@ -15,10 +20,7 @@
     /* background-image: url(../img/background-imgcyan.jpg); */
     background-size: cover;
   }
-  @font-face{
-    font-family:'beyno';
-    src: url('../fonts/beyno/BEYNO.OTF') format('opentype'); 
- }
+  
  @font-face{
      font-family:'neutra-bookalt';
      src: url('../fonts/neutra/NEUTRATEXT-BOOKALT.OTF') format('opentype'); 
@@ -73,7 +75,7 @@
   }*/
 
 
-  /* ---------------------------Cambios NavBar------------------------------ */
+  /* ---------------------------Cambios NavBar------------------------------
   .bg_negro {
     background-color: #000!important;
 }
@@ -157,7 +159,7 @@ nav form button:hover{
     top: 45px;
     height: 40px;
 
-}*/
+}*//*
 @media(min-width:512px){
   .logo img{
     margin-left: 78px;
@@ -182,7 +184,7 @@ nav form button:hover{
   ul li{
     font-size: 1.2em;
   }
-}
+} */
 
   /* --------------------------Cambios estilos de texto------------------------- */
 
@@ -268,11 +270,11 @@ nav form button:hover{
   }
 } 
  /* --------------------------Cambios Contact------------------------- */
- .sectioncontact{
+ /*.sectioncontact{
     display: flex;
     background-color: #272727;
     width: 50vw;
-    /* flex-wrap: wrap; */
+   
     margin-top: 135px;
  }
  .articlecontact{
@@ -291,7 +293,7 @@ nav form button:hover{
   display: flex;
   background-color: #C7C7C7;
   flex-wrap: nowrap;
- } */
+ } 
  .titulosDePaginas{
    color: #c7c7c7;
    font-family: 'neutra-bookalt';
@@ -301,9 +303,9 @@ nav form button:hover{
    .sectioncontact{
      width: 100vw;
    }
- }
+ }*/
 
- /*-----Footer------*/
+ /*-----Footer------
  
  .container-footer-all{
   width: 100%;
@@ -395,9 +397,9 @@ a{
   .colum1 {
     max-width: 100vw;
   }
-}
+}*/
 
-/* --------------------------Cambios Editar Perfil------------------------- */
+/*--------------------------Cambios Editar Perfil-------------------------
 
 .edit{
   margin-top:150px;
@@ -577,7 +579,7 @@ a{
     height: 90vh;
   }
 }
-
+*/
 
 
 
