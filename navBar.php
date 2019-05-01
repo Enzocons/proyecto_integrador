@@ -73,7 +73,7 @@ include_once("controladores/funciones.php");
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <?php
-                if (isset($_SESSION["email"])==null) {
+                if (isset($_SESSION["email"])==null||isset($_COOKIE["email"])==null) {
                    echo"<a class='dropdown-item' href='login.php'>Login</a>";
                    echo"<a class='dropdown-item' href='registro.php'>Register</a>";
                 }else{
