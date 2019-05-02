@@ -54,22 +54,31 @@ nav form button:hover{
   width: 24px;
   height: 24px;
 }
-.botoneslg form{
-  display: none;
-}
 .profile2 img{
   width: 24px;
   height: 24px;
 }
-.dropdown img{
+.login_img{
   width: 24px;
   height: 24px;
-
+  
 }
 .logo img{
   width: 100px;
   height: 100px;
   margin-left: 20px;
+}
+.botoneslg{
+  margin-right: 0;
+  display: none;
+}
+.botonxs img {
+  width: 24px;
+  height: 24px;
+
+}
+.menu_login {
+  margin-left: -105px!important;
 }
 /*.navbar-toggler.collapsed{
   position: absolute;
@@ -98,7 +107,7 @@ nav form button:hover{
   .logo img{
     margin-left: 0;
     }
-  .botoneslg form{
+  .botoneslg{
     display: flex;
   }
   .botonesxs form{
@@ -108,7 +117,15 @@ nav form button:hover{
     font-size: 1.2em;
   }
 }
-.nigga{
-  background-color: black;
-  color: white;
+.logeado{
+  background-color: #202020;
+  color:white;
+  margin-left: 20px;
+  border-style: none;
+}
+.perfil_img{
+  width:70px;
+  height:65px;
+  border-radius: 50%;
+  
 }

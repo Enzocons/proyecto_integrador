@@ -16,17 +16,17 @@ include_once("controladores/funciones.php");
            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
             <button type="submit"class="profile"><img src="img/search.png" alt=""></button>
             <div class="dropdown">
-                <button class=" dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="profile">
+                <button class=" dropdown botonxs" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="profile">
                 <img src="img/profile.png" alt="">
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu menu_login" aria-labelledby="dropdownMenuButton">
                 <?php
                 if (isset($_SESSION["email"])==null&&isset($_COOKIE["email"])==null) {
                    echo"<a class='dropdown-item' href='login.php'>Login</a>";
                    echo"<a class='dropdown-item' href='registro.php'>Register</a>";
                 }else{
                  echo" <a class='dropdown-item' href='editarperfil.php'>Perfil</a>";
-                 echo" <a class='dropdown-item logout' href='logout.php'>log out</a>";
+                 echo" <a class='dropdown-item logout' href='logout.php'>Cerrar Sesión</a>";
                 }
               ?>
                 </div>
@@ -74,32 +74,32 @@ include_once("controladores/funciones.php");
       <form class="form-inline my-2 my-lg-0">
        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button type="submit"class="profile"><img src="img/search.png" alt=""></button>
-        <div class="dropdown">
+        <button type="button" class="profile"><img src="img/carrito.png" alt=""></button>
+        
+      </form>
+    </div>
+        <div class="dropdown botoneslg" style="margin: 0;">
           <?php 
             if(isset($_SESSION["email"])==null&&isset($_COOKIE["email"])==null){
               echo"<button class=' dropdown' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' class='profile'>
-              <img src='img/profile.png' alt=''>
+              <img class='login_img' src='img/profile.png' alt=''>
               </button>";
             }else{
-              echo" <button class=' dropdown nigga' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' class='profile'>".$_SESSION['avatar']." ".$_SESSION["nombre"]."</button>";
+              echo" <button class=' dropdown logeado' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' class='profile'>"?><img class="perfil_img" src="imagenes/<?= isset($_SESSION['avatar'])?$_SESSION['avatar']:''; ?>" alt=''><?="</button>";
             }
             ?>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-menu menu_login" aria-labelledby="dropdownMenuButton">
               <?php
                 if (isset($_SESSION["email"])==null&&isset($_COOKIE["email"])==null) {
                    echo"<a class='dropdown-item' href='login.php'>Login</a>";
                    echo"<a class='dropdown-item' href='registro.php'>Register</a>";
                 }else{
                  echo" <a class='dropdown-item' href='editarperfil.php'>Perfil</a>";
-                 echo" <a class='dropdown-item logout' href='logout.php'>log out</a>";
+                 echo" <a class='dropdown-item logout' href='logout.php'>Cerrar Sesión</a>";
                 }
               ?>
             </div>
             </div>
-        <button type="button" class="profile"><img src="img/carrito.png" alt=""></button>
-        
-      </form>
-    </div>
   </div>
 </nav> 
     </header>

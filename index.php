@@ -68,27 +68,29 @@
 <!-- ========
 >>>>>>> -->
         <section class="section1">
-              <article class="article1 col-xs-12 col-sm-6 col-md-5 col-lg-3 col-xl-3 p-0">
-                <img src="img/razer4.jpg" class="img-fluid  rounded" alt="Responsive image">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, excepturi!
-                </p>
-                <p class="precio">$1500</p>
-                <button type="button" class="btn btn-primary">Comprar</button>
-              </article>
-              <article class="article2 col-xs-12 col-sm-6 col-md-5 col-lg-3 col-xl-3 p-0">
-                <img src="img/razer2.jpg" class="img-fluid rounded" alt="Responsive image">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, excepturi!
+             <div class="articulos">
+                <article class="article1 col-xs-12 col-sm-6 col-md-5 col-lg-3 col-xl-3 p-0">
+                  <img src="img/razer4.jpg" class="img-fluid  rounded" alt="Responsive image">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, excepturi!
                   </p>
-                <p class="precio">$1600</p>
-                <button type="button" class="btn btn-primary">Comprar</button>
-              </article>
-              <article class="article3 col-xs-12 col-sm-6 col-md-5 col-lg-3 col-xl-3 p-0">
-                <img src="img/razer3.jpg" class="img-fluid rounded" alt="Responsive image">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, excepturi!
-                  </p>
-                <p class="precio">$1300</p>
-                <button type="button" class="btn btn-primary">Comprar</button>
-              </article>
+                  <p class="precio">$1500</p>
+                  <button type="button" class="btn btn-primary">Comprar</button>
+                </article>
+                <article class="article2 col-xs-12 col-sm-6 col-md-5 col-lg-3 col-xl-3 p-0">
+                  <img src="img/razer2.jpg" class="img-fluid rounded" alt="Responsive image">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, excepturi!
+                    </p>
+                  <p class="precio">$1600</p>
+                  <button type="button" class="btn btn-primary">Comprar</button>
+                </article>
+                <article class="article3 col-xs-12 col-sm-6 col-md-5 col-lg-3 col-xl-3 p-0">
+                  <img src="img/razer3.jpg" class="img-fluid rounded" alt="Responsive image">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, excepturi!
+                    </p>
+                  <p class="precio">$1300</p>
+                  <button type="button" class="btn btn-primary">Comprar</button>
+                </article>
+             </div>
         </section>
         <section class="section2">
           <article class="article4">

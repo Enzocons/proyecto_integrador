@@ -39,12 +39,21 @@
     margin-top: 40px;
     
   }
+  .articulos{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    background-size: cover;
+    padding: 10px;
+    margin-top: 40px;
+  }
   .section1 article{
     background-color: #111111;
-    margin: 20px;
     align-items: center;
     box-shadow: 0 0px 9px 0 rgba(0,255,255,0.651);
     /*rgba(73, 5, 5, 0.637), 0 6px 20px 0 rgba(90, 3, 3, 0.651)*/
+    padding: 10px;
+    margin-top: 40px;
   }
 
  img{
@@ -62,9 +71,9 @@
     
   }
   .section1 button{
-    margin-left:125px;
     margin-top: 30px;
     margin-bottom: 30px;
+    margin-left: 35%;
     
   }
   .dropdown-menu{
@@ -228,12 +237,12 @@ nav form button:hover{
 }
   
 @media (min-width: 768px){
-  .section1{
+  .articulos{
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
   }
-  .section1 article{
+  .articulos article{
     margin:27px;
     max-width: 50%;
   }
@@ -252,11 +261,12 @@ nav form button:hover{
 
   }
   
-  .section1{
+  .articulos{
     flex-wrap: nowrap;
+    margin-left: 20px;
   }
  
-  .section1 article{
+  .articulos article{
     margin:38px;
   }
   .section2 article img{
@@ -271,7 +281,10 @@ nav form button:hover{
 
 
   }
-  .section1 article{
+  .articulos{
+    margin-left:40px;
+  }
+  .articulos article{
     margin:46px;
   }
   .section2 article img{
