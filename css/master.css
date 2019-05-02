@@ -74,6 +74,9 @@
     background: black;
     color: white;
   }
+  .navbar-nav{
+    flex-direction: row;
+  }
 
   /*@media(min-width:992px){
   .section1 article:hover{
@@ -276,6 +279,7 @@ nav form button:hover{
     
   }
 } 
+
  /* --------------------------Cambios Contact------------------------- */
  /*.sectioncontact{
     display: flex;
