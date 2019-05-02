@@ -3,8 +3,8 @@ include_once("controladores/funciones.php");
 if ($_POST){
   $errores=validar($_POST,"register");
   if(count($errores)==0){
-    $avatar = armarAvatar($_FILES);
-    $registro = crearRegistro($_POST,$avatar);
+   /* $avatar = armarAvatar($_FILES);*/
+  $registro = crearRegistro($_POST/*,$avatar*/);
     guardar($registro,"register");
     header("location:login.php");
     exit;
@@ -58,10 +58,6 @@ if ($_POST){
                             <span class="errores"> <?= isset($errores["repass"])?$errores["repass"]:null; ?> </span>
                             <!-- <small id="olvidecontraseña" class="form-text text-muted"><a href="">Olvido su contraseña?</a> </small> -->
                     </div>
-                    <!--PEDIDO DE AVATAR-->
-                   <input  type="file" name="avatar" value=""/> <br>
-                    <span class="errores"> <?= isset($errores["avatar"])?$errores["avatar"]:null;?> </span>
-                    <br>
                     <!-- <div class="form-group form-check"> 
                       <input name="remember" type="checkbox" class="form-check-input" id="exampleCheck1">
                       <label class="form-check-label" for="exampleCheck1">Recuérdame.</label>

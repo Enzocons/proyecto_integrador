@@ -44,7 +44,7 @@ function validar($datos,$bandera){
             $errores["repass"]="Passwords do not match";
         }
     }
-    if($bandera=="register"){
+    /*if($bandera=="register"){
         if($_FILES["avatar"]["error"]!=0){
             $errores["avatar"]="Error,debe subir imagen";
         }
@@ -53,7 +53,7 @@ function validar($datos,$bandera){
         if($ext!="png" && $ext!="jpg"){
             $errores["avatar"]="Debe seleccionar archivo png ó jpg";
         }  
-    }
+    }*/
 
     return $errores;
 }
@@ -64,7 +64,7 @@ function validar($datos,$bandera){
         }
     }
     
-    function armarAvatar($imagen){
+  /*  function armarAvatar($imagen){
         $nombre = $imagen["avatar"]["name"];
         $ext = pathinfo($nombre,PATHINFO_EXTENSION);
         $archivoOrigen = $imagen["avatar"]["tmp_name"];
@@ -76,14 +76,20 @@ function validar($datos,$bandera){
         move_uploaded_file($archivoOrigen,$archivoDestino);
         $avatar=$avatar.".".$ext;
         return $avatar;
-    }
+    }*/
     
-    function crearRegistro($datos,$imagen){
+    function crearRegistro($datos/*,$imagen*/){
+        $numero=rand(1,5);
+        if ($numero==1) { $avatarrand="../avatars/avatar1.png";}
+        if ($numero==2) { $avatarrand="../avatars/avatar2.png";}
+        if ($numero==3) { $avatarrand="../avatars/avatar3.png";}
+        if ($numero==4) { $avatarrand="../avatars/avatar4.png";}
+        if ($numero==5) { $avatarrand="../avatars/avatar5.png";}
         $usuario = [
             "nombre"=>$datos["nombre"],
             "email"=>$datos["email"],
             "password"=>password_hash($datos["pass"],PASSWORD_DEFAULT),
-            "avatar"=>$imagen
+            "avatar"=>$avatarrand
         ];
         return $usuario;
     }
