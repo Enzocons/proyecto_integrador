@@ -42,6 +42,7 @@
             
         </div>
         <div class="avataredit col-sm-5 col-md-5 col-lg-5 col-xl-5">
+          <img src="imagenes/<?= isset($_SESSION['avatar'])?$_SESSION['avatar']:''; ?>" alt=''>  
             <label for="avatar">Cambiar avatar<input  type="file" name="avatar" value=""/></label>
         </div>                  
         <div class="edit3 col-sm-12 col-md-12 col-lg-12 col-xl-12">

@@ -19,7 +19,7 @@
                 <h2>Contraseña Restablecida</h2>
                 <hr>
                 <p>Su contraseña se ha restablecido correctamente</p>
-                <a type="button" class="btn btn-success" href="login.php">Aceptar</a>
+                <a type="button" class="btn botonrec" href="login.php">Aceptar</a>
             </article>
         </section>
     </div>

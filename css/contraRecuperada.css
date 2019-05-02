@@ -35,7 +35,7 @@ body{
     padding: 1em;
     border: 1px;
     border: solid;
-    border-color: #00FF00;
+    border-color: #9033A8;
     font-weight: bolder;
    /* box-shadow: 0.2em 0em 0.8em 0.08em #00FF00;*/
     text-align: center;
@@ -49,7 +49,14 @@ body{
 .logo1 img{
     height:15vw;
 }
-    
+.botonrec{
+    background-color: #9033A8;
+    color: white;
+}
+.botonrec:hover{
+    background-color:green; 
+    color: white;
+}
 
 hr { 
     display: flex;
@@ -58,7 +65,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     border-width: 0.1em;
-    border-color: #00FF00;
+    border-color: #9033A8;
   }
 .cuenta a{
     color: #c7c7c7;

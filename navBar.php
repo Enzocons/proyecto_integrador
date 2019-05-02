@@ -81,7 +81,7 @@ include_once("controladores/funciones.php");
               <img src='img/profile.png' alt=''>
               </button>";
             }else{
-              echo" <button class=' dropdown' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' class='profile'>".$_SESSION["avatar"]."</button>";
+              echo" <button class=' dropdown nigga' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' class='profile'>".$_SESSION['avatar']." ".$_SESSION["nombre"]."</button>";
             }
             ?>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
