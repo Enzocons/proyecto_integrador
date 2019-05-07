@@ -69,6 +69,22 @@ include_once("controladores/funciones.php");
       <li class="nav-item">
         <a class="nav-link" href="faqs.php">FAQs</a>
       </li>
+      <?php
+      if (isset($_SESSION["email"])==null&&isset($_COOKIE["email"])==null) {
+        null;
+    }else{
+      if($_SESSION["perfil"]==97){
+        echo"<li class='nav-item dropdown'>";
+          echo" <a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+            Administrar
+          </a>";
+          echo"<div class='dropdown-menu' aria-labelledby='navbarDropdown'>
+            <a class='dropdown-item' href='teclados.php'>Administrar Usuarios</a>
+            <a class='dropdown-item' href='teclados.php'>Administrar Articulos</a>
+          </div>
+        </li>";
+      }
+    }?>
     </ul>
     <div class="botoneslg">
       <form class="form-inline my-2 my-lg-0">

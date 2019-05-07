@@ -92,7 +92,8 @@ function validar($datos,$bandera){
             "nombre"=>$datos["nombre"],
             "email"=>$datos["email"],
             "password"=>password_hash($datos["pass"],PASSWORD_DEFAULT),
-            "avatar"=>$avatarrand
+            "avatar"=>$avatarrand,
+            "perfil"=>"1"
         ];
         return $usuario;
     }
