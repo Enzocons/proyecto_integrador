@@ -1,13 +1,13 @@
 <?php
-include_once("controladores/funciones.php");
-if ($_POST){
-  $errores=validar($_POST,"register");
-  if(count($errores)==0){
-   /* $avatar = armarAvatar($_FILES);*/
-  $registro = crearRegistro($_POST/*,$avatar*/);
-    guardar($registro,"register");
-    header("location:login.php");
-    exit;
+include_once("autoload.php");
+if($_POST){
+  $usuario = new Usuario($_POST["nombre"],$_POST["email"],$_POST["pass"]);
+  $errores = $validar -> validarUsuario($usuario,$_POST["repass"]);
+  if (count($errores)== 0){
+    $userNuevo = $newUser -> armarUser($usuario);
+    $abrirBaseDatos = $json->leer();
+    $json-> guardar($userNuevo);
+    redirect("login.php");
   }
 }
 ?>
