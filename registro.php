@@ -4,10 +4,15 @@ if($_POST){
   $usuario = new Usuario($_POST["nombre"],$_POST["email"],$_POST["pass"]);
   $errores = $validar -> validarUsuario($usuario,$_POST["repass"]);
   if (count($errores)== 0){
-    $userNuevo = $newUser -> armarUser($usuario);
-    $abrirBaseDatos = $json->leer();
-    $json-> guardar($userNuevo);
-    redirect("login.php");
+    $verJson = $json-> leer();
+    $user = Buscador::buscarEmail($usuario->getEmail(),$verJson);
+    if($user!=null){
+      $errores["email"] = "este email ya esta registrado";
+    }else{
+      $userNuevo = $newUser -> armarUser($usuario);
+      $json-> guardar($userNuevo);
+      redirect("login.php");
+    }
   }
 }
 ?>
