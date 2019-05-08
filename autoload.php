@@ -14,6 +14,6 @@
     $validar = new Validador();
     $newUser = new ArmarUsuario();
     $json = new BaseJSON("usuarios.json");
-    $session=new SessionCookie();
-    
+    $session = new SessionCookie();
+    SessionCookie::sessionStart();
 

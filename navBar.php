@@ -1,7 +1,7 @@
 <?php
 //include_once("controladores/funciones.php");
 include_once("autoload.php");
-?>
+  ?>
 <!-- ---------- Include para la navBar--------------- -->
 
   <div class="container-fluid p-0"> 
@@ -74,7 +74,7 @@ include_once("autoload.php");
       if (isset($_SESSION["email"])==null&&isset($_COOKIE["email"])==null) {
         null;
     }else{
-      if($_SESSION["perfil"]==97){//&&isset($_COOKIE["perfil"])==97){
+      if(isset($_SESSION["perfil"])==97||isset($_COOKIE["perfil"])==97){
         echo"<li class='nav-item dropdown'>";
           echo" <a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
             Administrar
