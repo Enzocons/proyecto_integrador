@@ -1,5 +1,5 @@
 <?php
-    class UsuarioLogin{
+  /*  class UsuarioLogin{
         private $email;
         private $pass;
 
@@ -20,4 +20,4 @@
             $this->pass=$pass;
         }
 
-    }
+    }*/

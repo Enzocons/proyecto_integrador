@@ -43,7 +43,7 @@
             }elseif (!filter_var($email,FILTER_VALIDATE_EMAIL)){
                 $errores["email"]="Email invalido";
             }
-            $pass = trim($user-> getPass());
+            $pass = trim($user-> getPassword());
             if(empty($pass)){
                 $errores["pass"]="Inserte una contraseña";
             }elseif (strlen($pass)<6) {

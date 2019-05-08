@@ -4,7 +4,7 @@
         private $email;
         private $password;
 
-        public function __construct($nombre,$email,$password){
+        public function __construct($email,$password,$nombre=null){
 
             $this->nombre = $nombre;
 
@@ -13,13 +13,6 @@
             $this->password = $password;
         }
 
-        public function getNombre(){
-            return $this->nombre;
-        }
-
-        public function setNombre($nombre){
-            $this->nombre=$nombre;
-        }
 
         public function getEmail(){
             return $this->email;
@@ -36,5 +29,11 @@
         public function setPassword($password){
             $this->password=$password;
         }
+        public function getNombre(){
+            return $this->nombre;
+        }
 
+        public function setNombre($nombre){
+            $this->nombre=$nombre;
+        }
     }

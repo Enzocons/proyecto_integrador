@@ -1,7 +1,7 @@
 <?php
 include_once("autoload.php");
 if($_POST){
-  $usuario = new Usuario($_POST["nombre"],$_POST["email"],$_POST["pass"]);
+  $usuario = new Usuario($_POST["email"],$_POST["pass"],$_POST["nombre"]);
   $errores = $validar -> validarUsuario($usuario,$_POST["repass"]);
   if (count($errores)== 0){
     $verJson = $json-> leer();
