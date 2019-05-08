@@ -1,5 +1,6 @@
 <?php
-    require_once("controladores/funciones.php");
+    //require_once("controladores/funciones.php");
+    require_once("autoload.php");
 ?>
 
 <!DOCTYPE html>

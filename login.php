@@ -1,25 +1,32 @@
 <?php
-  include_once("controladores/funciones.php");
-  if ($_POST) {
-    $errores=validar($_POST,"login");
-    if(count($errores)==0){
-      $usuario=buscarEmail($_POST["email"],null);
-      if ($usuario==null) {
-        $errores["email"]="El usuario no existe";
-      }else {
-        if (password_verify($_POST["pass"],$usuario["password"])===false) {
-          $errores["pass"]="Usuario o contraseña erroneas";
-        }else {
-          seteoUsuario($usuario,$_POST);
-          if (validarUsuario()) {
-            header("location:index.php");
-            exit;
-          }else{
-            header("location:registro.php");
-            exit;}
-        }
+  include_once("autoload.php");
+  if($_POST){
+    $user=new UsuarioLogin($_POST["email"],$_POST["pass"]);
+    $errores=$validar->validarLogin($user);
+    $pass=$user->getPass();
+    if(isset($_POST["remember"])){
+      $remember=$_POST["remember"];
+    }else{null;}
+    if (count($errores)==0) {
+    $verJson = $json-> leer();
+    $usuario = Buscador::buscarEmail($user->getEmail(),$verJson);
+    if($usuario==null){
+      $errores["email"] = "Primero debe registrarse";
       }
+      else{
+      if (password_verify($pass,$usuario["password"])==false) {
+        $errores["pass"]="Usuario o contraseña Erroneas";
+      }else{
+        $session->setUser($usuario);
+        $session->setCookie($usuario,$remember);
+        if ($session->validarUser()) {
+          redirect("index.php");
+        }else{
+          redirect("registro.php");
+        }
+      }  
     }
+  }
   }
 ?>
 
