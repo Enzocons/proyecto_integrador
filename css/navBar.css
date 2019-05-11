@@ -23,6 +23,12 @@
   .dropdown-menu{
     background-color: black;
   }
+ .menu_login {
+  margin-left: -114px !important;
+  margin-top: 3px !important;
+  text-align: right !important;
+ }
+
   .navbar-nav .dropdown-menu{
     position: absolute;
   }
@@ -36,10 +42,8 @@
     text-align: center;
     cursor: default;
     color: buttontext;
-    background-color: buttonface;
     box-sizing: border-box;
     border-width: 2px;
-    border-style: solid;
     border-color: buttonface;
     border-image: initial;
 }  
@@ -77,9 +81,9 @@ nav form button:hover{
   height: 24px;
 
 }
-.menu_login {
+/* .menu_login {
   margin-left: -105px!important;
-}
+} */
 /*.navbar-toggler.collapsed{
   position: absolute;
 }*/
@@ -94,12 +98,12 @@ nav form button:hover{
 }*/
 @media(min-width:512px){
   .logo img{
-    margin-left: 78px;
+    /* margin-left: 78px; */
   }
 }
 @media(min-width:768px){
   .logo img{
-  margin-left: 168px;
+  /* margin-left: 168px; */
   }
 
 }
@@ -120,7 +124,7 @@ nav form button:hover{
 .logeado{
   background-color: #202020;
   color:white;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   border-style: none;
 }
 .perfil_img{
@@ -128,4 +132,9 @@ nav form button:hover{
   height:65px;
   border-radius: 50%;
   
+}
+
+.botonNavBar{
+  width: 38px;
+ 
 }

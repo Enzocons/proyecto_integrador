@@ -90,11 +90,8 @@ include_once("autoload.php");
     <div class="botoneslg">
       <form class="form-inline my-2 my-lg-0">
        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button type="submit"class="profile"><img src="img/search.png" alt=""></button>
-        <button type="button" class="profile"><img src="img/carrito.png" alt=""></button>
-        
-      </form>
-    </div>
+       <a class="botonNavBar" href="search.php" ><img class="botonNavBar"src="img/search.svg" alt="Search"></a>
+        <a class="botonNavBar" href="carrito.php" ><img class="botonNavBar"src="img/carrito.svg" alt="Shopping_Cart"></a>
         <div class="dropdown botoneslg" style="margin: 0;">
           <?php 
             if(isset($_SESSION["email"])==null&&isset($_COOKIE["email"])==null){
@@ -105,7 +102,7 @@ include_once("autoload.php");
               echo" <button class=' dropdown logeado' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' class='profile'>"?><img class="perfil_img" src="imagenes/<?= isset($_SESSION['avatar'])?$_SESSION['avatar']:''; ?>" alt=''><?="</button>";
             }
             ?>
-            <div class="dropdown-menu menu_login" aria-labelledby="dropdownMenuButton">
+             <div class="dropdown-menu menu_login" aria-labelledby="dropdownMenuButton">
               <?php
                 if (isset($_SESSION["email"])==null&&isset($_COOKIE["email"])==null) {
                    echo"<a class='dropdown-item' href='login.php'>Login</a>";
@@ -118,6 +115,11 @@ include_once("autoload.php");
             </div>
             </div>
   </div>
+        </div>
+        
+        
+      </form>
+  
 </nav> 
     </header>
     </div>
