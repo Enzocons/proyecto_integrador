@@ -20,7 +20,6 @@
             $jsusuario = json_encode($registro);
             file_put_contents($this->nombreArchivo, $jsusuario . PHP_EOL , FILE_APPEND);
         }
-        
         public function leer(){
             $baseDatosJson=file_get_contents($this->nombreArchivo);
             $baseDatosJson=explode(PHP_EOL,$baseDatosJson);
@@ -31,6 +30,7 @@
             return $arrayUsuarios;
             
         }
+        
                 
         public function borrar(){
             //

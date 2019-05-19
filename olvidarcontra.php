@@ -1,17 +1,18 @@
 <?php
-  include_once("controladores/funciones.php");
+  include_once("autoload.php");
   if ($_POST) {
-    $errores=validar($_POST,"olvidepass");
-    if (count($errores)==0) {
-      $newpass=$_POST["pass"];
-      $usuario=buscarEmail($_POST["email"],$newpass);
+    $user=new Usuario($_POST["email"],null,null);
+    $errores=$validar->validarOlvidarPass($user,$_POST["pass"],$_POST["repass"]);
+    if(count($errores)==0){
+      $verJson = $json-> leer();
+      $usuario = Buscador::buscarEmail($user->getEmail(),$verJson);
       if($usuario==null){
-        $errores["email"]="El usuario no existe";
-      }else{
-        cambiopass($_POST["email"],$newpass);
-        header("location:contrarecuperada.php");
-      }
-    }
+        $errores["email"] = "Usuario invalido";
+        }else{
+          OlvidePassword::cambioPass($user->getEmail(),$_POST["pass"],$verJson,$json);
+          redirect("contrarecuperada.php");
+        }
+    } 
   }
 ?>
 

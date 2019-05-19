@@ -8,6 +8,7 @@
     require_once("clases/Buscador.php");
    // require_once("clases/UsuarioLogin.php");
     require_once("clases/SessionCookie.php");
+    require_once("clases/OlvidePassword.php");
 
 
 

@@ -51,4 +51,25 @@
             }
             return $errores;
         }
+        public function validarOlvidarPass($user,$pass,$repass){
+            $errores=array();
+            $email= trim($user->getEmail());
+            if(empty($email)){
+                $errores["email"]="Completar email";
+            }elseif (!filter_var($email,FILTER_VALIDATE_EMAIL)){
+                $errores["email"]="Email invalido";
+            }
+            if (isset($repass)) {
+                $repass=trim($repass);
+            }
+            if(empty($pass)){
+                $errores["pass"]="Inserte una contraseña";
+            }elseif (strlen($pass)<6) {
+                $errores["pass"]="La contraseña debe tener al menos 6 caracteres";
+            }
+            if ($pass != $repass) {
+                    $errores["repass"]="Las contraseñas no coinciden";
+                }
+            return $errores; 
+        }
     }
